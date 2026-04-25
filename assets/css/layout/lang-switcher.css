@@ -1,0 +1,195 @@
+/* ─────────────────────────────────────────────
+   Lang Switcher
+   Dropdown globe button in the Navbar auth zone
+   ───────────────────────────────────────────── */
+
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ── Toggle button ────────────────────────── */
+.lang-switcher__toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: var(--color-text, #e8dcc8);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.lang-switcher__toggle:hover,
+.lang-switcher.is-open .lang-switcher__toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Light navbar variant */
+.navbar.is-light .lang-switcher__toggle {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #1a1a1a;
+}
+.navbar.is-light .lang-switcher__toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+.lang-switcher__globe {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.lang-switcher__current {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.lang-switcher__chevron {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  transition: transform 0.22s ease;
+  opacity: 0.7;
+}
+
+.lang-switcher.is-open .lang-switcher__chevron {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown menu ────────────────────────── */
+.lang-switcher__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  max-height: 380px;
+  overflow-y: auto;
+  background: rgba(18, 14, 10, 0.96);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px 0;
+  z-index: 9999;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04);
+
+  /* Hidden state */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px) scale(0.98);
+  transform-origin: top right;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.lang-switcher__menu[aria-hidden="false"] {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+/* Scrollbar styling */
+.lang-switcher__menu::-webkit-scrollbar { width: 4px; }
+.lang-switcher__menu::-webkit-scrollbar-track { background: transparent; }
+.lang-switcher__menu::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+/* ── Group label ──────────────────────────── */
+.lang-switcher__group-label {
+  padding: 6px 14px 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  user-select: none;
+}
+
+.lang-switcher__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 4px 10px;
+}
+
+/* ── Option buttons ───────────────────────── */
+.lang-switcher__option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.14s, color 0.14s;
+}
+
+.lang-switcher__option:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.lang-switcher__option.active {
+  color: var(--color-gold, #c9a96e);
+  font-weight: 600;
+}
+
+.lang-switcher__flag {
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.lang-switcher__native {
+  flex: 1;
+}
+
+.lang-switcher__check {
+  font-size: 0.75rem;
+  color: var(--color-gold, #c9a96e);
+  flex-shrink: 0;
+}
+
+/* ── Mobile adjustments ───────────────────── */
+@media (max-width: 960px) {
+  .lang-switcher__toggle {
+    padding: 5px 8px;
+    font-size: 0.68rem;
+  }
+
+  .lang-switcher__menu {
+    right: auto;
+    left: 0;
+    min-width: 180px;
+    transform-origin: top left;
+  }
+}
+
+/* ── RTL support (Arabic) ─────────────────── */
+[dir="rtl"] .lang-switcher__menu {
+  right: auto;
+  left: 0;
+  transform-origin: top left;
+}
+
+[dir="rtl"] .lang-switcher__option {
+  text-align: right;
+  flex-direction: row-reverse;
+}

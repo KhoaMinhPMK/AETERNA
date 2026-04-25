@@ -9,6 +9,7 @@
  */
 
 import { ASSETS } from '../content/assets.js';
+import { t } from '../i18n/i18n.js';
 
 /**
  * Render / update the hero section.
@@ -19,7 +20,7 @@ import { ASSETS } from '../content/assets.js';
 export function Hero(container, character, onNextChar) {
   container.innerHTML = `
     <p class="hero__chapter" id="hero-chapter">${character.serial || ''}</p>
-    <p class="hero__kicker">Core experience pillar</p>
+    <p class="hero__kicker" data-i18n="hero.kicker">${t('hero.kicker')}</p>
 
     <!-- Pillar name (large title) -->
     <h1 class="hero__char-name" id="hero-char-name">
@@ -52,8 +53,8 @@ export function Hero(container, character, onNextChar) {
         </div>
 
         <!-- Intro button -->
-        <button class="btn-more" type="button" id="hero-more-btn" aria-label="Back to project introduction">
-          <span class="btn-more__label">${character.buttonLabel || 'Project Intro'}</span>
+        <button class="btn-more" type="button" id="hero-more-btn" aria-label="${t('hero.backToIntro')}">
+          <span class="btn-more__label">${character.buttonLabel || t('hero.projectIntro')}</span>
           <img
             class="btn-more__arrow"
             src="${ASSETS.iconArrow}"
@@ -69,7 +70,7 @@ export function Hero(container, character, onNextChar) {
     <!-- Right visual frame -->
     <div class="char-frame" id="char-frame">
       <div class="char-frame__hud">
-        <span class="char-frame__hud-label">AETERNA DOSSIER</span>
+        <span class="char-frame__hud-label" data-i18n="hero.hudLabel">${t('hero.hudLabel')}</span>
         <span class="char-frame__hud-name" id="char-frame-hud-name">${character.primaryTag || ''}</span>
       </div>
 
@@ -88,7 +89,8 @@ export function Hero(container, character, onNextChar) {
         class="char-frame__nav-btn"
         id="char-frame-nav-btn"
         type="button"
-        aria-label="Next pillar"
+        data-i18n-aria="hero.nextPillar"
+        aria-label="${t('hero.nextPillar')}"
       >
         <!-- Arrow SVG inline for reliability -->
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -140,8 +142,8 @@ export function updateHero(container, character) {
     if (frameHudEl)  frameHudEl.textContent  = character.primaryTag || '';
     if (elementName) elementName.textContent = character.primaryTag || '';
     if (secondaryEl) secondaryEl.textContent = character.secondaryTag || '';
-    if (moreLabelEl) moreLabelEl.textContent = character.buttonLabel || 'Project Intro';
-    if (moreBtn)     moreBtn.setAttribute('aria-label', 'Back to project introduction');
+    if (moreLabelEl) moreLabelEl.textContent = character.buttonLabel || t('hero.projectIntro');
+    if (moreBtn)     moreBtn.setAttribute('aria-label', t('hero.backToIntro'));
 
     /* Fade back in */
     [nameEl, aboutEl, frameImg].forEach((el) => el?.classList.remove('transitioning'));

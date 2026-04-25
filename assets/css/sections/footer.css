@@ -241,6 +241,46 @@
   transform: translateY(-2px);
 }
 
+/* ── Coming Soon state ─────────────────────────────────────── */
+.site-footer__dl-btn--soon,
+.site-footer__btn--soon {
+  opacity: 0.46;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(0.3);
+  position: relative;
+}
+
+.site-footer__dl-btn--soon:hover,
+.site-footer__btn--soon:hover {
+  transform: none;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(230, 248, 218, 0.16);
+}
+
+/* "Soon" pill badge on download buttons */
+.site-footer__soon-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(201, 169, 110, 0.22);
+  border: 1px solid rgba(201, 169, 110, 0.38);
+  font-family: var(--font-ui);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(201, 169, 110, 0.88);
+  animation: soonPulse 2.6s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes soonPulse {
+  0%, 100% { opacity: 0.88; }
+  50%       { opacity: 0.48; }
+}
+
 /* -- base strip --------------------------------------------- */
 
 .site-footer__base {
