@@ -6,8 +6,6 @@
  *   - Radial bloom glow behind character
  */
 
-import { t } from '../i18n/i18n.js';
-
 function buildBadges(badges = []) {
   return badges
     .map(
@@ -108,10 +106,12 @@ export function HeroDetail(container, character, onBack) {
 
       ${metricsHTML.length ? `<div class="hero-detail__metrics">${metricsHTML}</div>` : ''}
 
+      ${sectionsHTML.length ? `<div class="hero-detail__sections">${sectionsHTML}</div>` : ''}
+
     </div>
 
     <!-- Back button (hidden, navigation via scroll) -->
-    <button class="hero-detail__back-btn" id="detail-back-btn" type="button" data-i18n-aria="hero.nextPillar" aria-label="${t('hero.nextPillar')}">
+    <button class="hero-detail__back-btn" id="detail-back-btn" type="button" aria-label="Explore next section">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M5 12h14M13 6l6 6-6 6"/>

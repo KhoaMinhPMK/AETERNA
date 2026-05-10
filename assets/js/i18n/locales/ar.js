@@ -4,14 +4,13 @@ const ar = {
   nav: {
     logoSub: 'RPG تراث آسيان',
     platform: 'المنصة',
+    features: 'الميزات',
     atlas: 'الأطلس',
-    impact: 'الأثر',
     manifesto: 'البيان',
     partner: 'شريك',
     journeyMap: 'خريطة الرحلة',
     intro: 'مقدمة',
     pillars: 'الركائز',
-    living: 'حيّ',
     openNav: 'فتح التنقل',
     closeNav: 'إغلاق التنقل',
     goToIntro: 'الذهاب إلى المقدمة',
@@ -20,7 +19,7 @@ const ar = {
     language: 'اللغة',
     changeLanguage: 'تغيير اللغة',
   },
-  journeyNav: { ariaIntro: 'الذهاب إلى قسم المقدمة', ariaPillars: 'الذهاب إلى قسم الركائز', ariaLiving: 'الذهاب إلى قسم التراث الحيّ', ariaAtlas: 'الذهاب إلى قسم الأطلس', ariaImpact: 'الذهاب إلى قسم الأثر', intro: 'مقدمة', pillars: 'الركائز', living: 'حيّ', atlas: 'الأطلس', impact: 'الأثر' },
+  journeyNav: { ariaIntro: 'الذهاب إلى قسم المقدمة', ariaVision: 'الذهاب إلى قسم الوصف', ariaPillars: 'الذهاب إلى قسم الركائز', ariaFeatures: 'الذهاب إلى قسم الميزات', ariaAtlas: 'الذهاب إلى قسم الأطلس', intro: 'مقدمة', vision: 'المنصة', pillars: 'الركائز', features: 'الميزات', atlas: 'الأطلس' },
   hero: { kicker: 'ركيزة التجربة الأساسية', hudLabel: 'ملف AETERNA', nextPillar: 'الركيزة التالية', backToIntro: 'العودة إلى مقدمة المشروع', projectIntro: 'مقدمة المشروع', ariaLabel: 'ركائز AETERNA', openPillar: 'فتح ركيزة {{name}}' },
   bridge01: { eyebrow: 'من البيان إلى التجربة', text: 'تتجسد المنصة في خمس ركائز قابلة للعب تحدد كيف يُتعلَّم AETERNA ويُحسّ ويُعاش.', aria: 'الانتقال من المقدمة إلى الركائز' },
   bridge02: { eyebrow: 'من الركائز إلى العالم', text: 'ما يبدأ كتصميم نظام يتحول إلى عالم تراث حيّ يمكن للاعبين التنقل فيه والتأثير عليه وتذكّره.', aria: 'الانتقال من الركائز إلى التراث الحيّ' },
@@ -59,8 +58,7 @@ const ar = {
     replayIntro: 'إعادة المقدمة',
     enterAtlas: 'دخول الأطلس',
     navPillars: 'الركائز',
-    navHeritage: 'التراث',
-    navImpact: 'الأثر',
+    navFeatures: 'الميزات',
     navAtlas: 'الأطلس',
     scrollTop: '↑ الأعلى',
     ariaFooter: 'خاتمة AETERNA',
@@ -90,5 +88,120 @@ const ar = {
     o2o_impact: { name: 'أثر O2O', primaryTag: 'من اللعبة إلى الواقع', secondaryTag: 'السياحة + الشركات الصغيرة', buttonLabel: 'مقدمة المشروع', description: 'تتصل المكافآت النادرة داخل اللعبة بقسائم السفر والتجارب التراثية ومنتجات الحرفيين، محولةً الاكتشاف الافتراضي إلى قيمة حقيقية قابلة للقياس.' },
     global_reach: { name: 'الوصول العالمي', primaryTag: 'نقابات عبر آسيان', secondaryTag: 'الصون المستدام', buttonLabel: 'مقدمة المشروع', description: 'يربط AETERNA المجتمعات الشبابية والمؤسسات والحكومات في شبكة تراثية مشتركة مدفوعة بالتعاون الثقافي ورؤى البيانات ومهام الاستدامة.' },
   },
+  solution: {
+    kicker: 'وصف الحل',
+    heading: 'ما هو <em>AETERNA؟</em>',
+    bodyP1: 'أيتيرنا (Aeterna) هي <strong class=\"sol-hl sol-hl--gold\">منصة ألعاب تقمص أدوار للتراث الرقمي من فئة AAA</strong> تستخدم <strong class=\"sol-hl sol-hl--gold\">الذكاء الاصطناعي السردي</strong> لتخليد روح <strong class=\"sol-hl sol-hl--gold\">الآسيان</strong>. نحن نتجاوز الألعاب التقليدية من خلال دمج <strong class=\"sol-hl sol-hl--gold\">آليات اللعب العادل</strong> مع <strong class=\"sol-hl sol-hl--gold\">اقتصاد O2O المستدام</strong>.',
+    coreValue: '<span class="sol-hl sol-hl--teal">القيمة الجوهرية:</span> تكريم <strong class="sol-hl sol-hl--gold">التراث</strong> عبر <strong class="sol-hl sol-hl--teal">تكنولوجيا متمحورة حول الإنسان</strong> لتعزيز <strong class="sol-hl sol-hl--gold">الرخاء المشترك</strong> و<strong class="sol-hl sol-hl--gold">ترفيه هادف.</strong>',
+    formulaVerb1: 'استخدم',
+    formulaNoun1: 'التكنولوجيا',
+    formulaSub1: 'لـ',
+    formulaSubList1: 'Online-to-Offline',
+    formulaSubList2: 'ذكاء سردي تطوري',
+    formulaVerb2: 'احفظ',
+    formulaNoun2: 'التراث',
+    formulaSub2: 'عبر',
+    formulaVerb3: 'حوّل',
+    formulaNoun3: 'أصول رقمية',
+    formulaNounSm: 'ميتافيرس التراث',
+    visionLabel: 'الرؤية',
+    visionText: 'أن نصبح <strong class="sol-hl sol-hl--gold">النظام البيئي الرائد للتراث الرقمي</strong> عالمياً، حيث تُخّلّد جميع القيم الثقافية وتُبعث بريق في <strong class="sol-hl sol-hl--teal">Metaverse</strong>.',
+    missionLabel: 'المهمة',
+    mission1: '<strong class="sol-hl sol-hl--gold">إحياء التراث:</strong> توظيف الذكاء الاصطناعي لسد الفجوة بين الأجيال، وتحويل الوثائق التاريخية إلى تجارب تفاعلية.',
+    mission2: '<strong class="sol-hl sol-hl--gold">خلودة القيم:</strong> رقمنة وحفظ روح ثقافة آسيان في الفضاء الرقمي لتبقى خالدة.',
+    mission3: '<strong class="sol-hl sol-hl--gold">تعزيز الاقتصاد المستدام:</strong> بناء نموذج O2O يحوّل المستخدمين إلى سياح حقيقيين يدعمون المجتمعات المحلية.',
+  },
+  heroIntro: {
+    eyebrow: 'عالم حيّ من جنوب شرق آسيا',
+    title: 'AETERNA',
+    tagline: 'أسطورة · ذاكرة · تراث',
+    cta: 'اكتشف العالم',
+  },
+
+  
+  sliderSection: {
+    kicker: "AETERNA · ASEAN CHRONICLES",
+    questLabel: "QUEST",
+    prev: "Previous nation",
+    next: "Next nation",
+    select: "Select {{name}}",
+    aria: "ASEAN Chronicles — 11 Nations"
+},
+  featuresSection: {
+    kicker: "الميزات الأساسية",
+    heading: "الركائز السبع لـ <em>AETERNA</em>",
+    subheading: "كل ميزة هي بوابة إلى عالم تراثي حي — مصممة للحفظ والتواصل والإلهام.",
+    f1Title: "مهام <span class='feature-card__title-highlight'>تراثية مخصصة</span>",
+    f1Desc: "تبدأ Aeterna برحلة تحرر شخصي، حيث يغامر اللاعبون في أراضٍ تراثية أُعيد إنشاؤها بتقنية ثلاثية الأبعاد دقيقة.",
+    f2Title: "<span class='feature-card__title-highlight'>تجسيد</span> تاريخي",
+    f2Desc: "جوهر اللعبة هو آلية 'التجسيد التاريخي'. من خلال نظام الغاتشا، يحصل اللاعبون على شخصيات مبنية على أبطال من 11 دولة آسيانية.",
+    f3Title: "نقاط <span class='feature-card__title-highlight'>التراكم الثقافي</span>",
+    f3Desc: "لتجنب الحظ المحض، تدمج Aeterna 'نقاط التراكم الثقافي'. كل محاولة غاتشا فاشلة تتحول إلى موارد معرفية قيّمة.",
+    f4Title: "اقتصاد <span class='feature-card__title-highlight'>يقوده اللاعبون</span>",
+    f4Desc: "تؤسس Aeterna اقتصادًا يقوده اللاعبون حيث تصبح العناصر النادرة أصولًا رقمية قابلة للتداول.",
+    f5Title: "غارات <span class='feature-card__title-highlight'>جماعية ومهام بيئية</span>",
+    f5Desc: "تؤكد اللعبة على التآزر من خلال الغارات الجماعية والمهام ذات الرسائل المعاصرة مثل القضاء على 'وحوش التلوث'.",
+    f6Title: "معرض شخصي & <span class='feature-card__title-highlight'>فعاليات مجتمعية</span>",
+    f6Desc: "تتيح ميزات المعرض الشخصي للاعبين إبراز فرديتهم وتحويل مجموعاتهم التراثية إلى أدوات للتواصل الثقافي.",
+    f7Title: "مكافأة هجينة — <span class='feature-card__title-highlight'>من الافتراضي إلى الواقع</span>",
+    f7Desc: "تربط Aeterna مباشرة بين السياحة والاستهلاك الحقيقي عبر نموذج المكافأة الهجينة. المجموعات النادرة تفتح امتيازات حقيقية."
+  },
+  countries: {
+    "vietnam": {
+        "name": "فيتنام",
+        "realm": "بُعد الأنفاس والتنين",
+        "story": "عروق التنين تتحجر. اعثر على النفَس الأول لإذابة الصخور واستعادة تدفق الحياة ومرونة الثقافة."
+    },
+    "thailand": {
+        "name": "تايلاند",
+        "realm": "مملكة النور الذهبي",
+        "story": "الطبقة الذهبية تسجن الروح الوطنية. تسلل إلى قلب الشمس لإيقاظ القوة الداخلية وتجديد الروحانية."
+    },
+    "cambodia": {
+        "name": "كمبوديا",
+        "realm": "أصداء عمالقة الحجر",
+        "story": "آلهة الحجر تنسى أسماءها وتسبب الزلازل. استخدم الموسيقى القديمة لتذكيرهم بهوياتهم لإنقاذ العالم."
+    },
+    "indonesia": {
+        "name": "إندونيسيا",
+        "realm": "أرخبيل النفوس المنعكسة",
+        "story": "الظلال تفسد بالضباب لخلق فوضى بارونغ. وازن بين النور والظلام لئلا يبتلع الظلام العالم."
+    },
+    "philippines": {
+        "name": "الفلبين",
+        "realm": "أرخبيل النجوم الساقطة",
+        "story": "بحر الرماد يرتفع. اربط قوة المجتمع لإشعال الشعلة المقدسة وتبديد ظلام المحيط إلى الأبد."
+    },
+    "malaysia": {
+        "name": "ماليزيا",
+        "realm": "حيث تلتقي الرياح الثلاث",
+        "story": "طفيلي يحاول تحويل الشجرة إلى لون واحد. احم التعددية العرقية لتوحيد الرياح الثلاث وإنشاء درع قوي."
+    },
+    "singapore": {
+        "name": "سنغافورة",
+        "realm": "قلعة الوقت الكريستالية",
+        "story": "الوقت يتسرب للبحر. افهم أن المستقبل يتطلب جذور صلبة أسفل الزجاج للعثور على أصل التدفق."
+    },
+    "myanmar": {
+        "name": "ميانمار",
+        "realm": "أرض الجرس الأبدي",
+        "story": "كيان الصمت يبتلع كل الأصوات. اجمع الترددات والاهتزازات لإنشاء سيمفونية قوية تحطم هذا الصمت."
+    },
+    "laos": {
+        "name": "لاوس",
+        "realm": "نهر مليون حلم أبيض",
+        "story": "النهر متجمد باللامبالاة. اكتشف شعلة الأمل لإذابة الجليد ورعاية الأحلام المستقبلية للأمة."
+    },
+    "brunei": {
+        "name": "بروناي",
+        "realm": "بئر الشرف والذهب الأسود",
+        "story": "الجشع يلوث الذكريات النفيسة. طهر التدفق بعهود الشرف للحفاظ على الأخلاق القديمة والازدهار العظيم."
+    },
+    "timorLeste": {
+        "name": "تيمور الشرقية",
+        "realm": "مهد إله التمساح القديم",
+        "story": "التمساح يرغب في النوم الأبدي. ضخ دماء جديدة عن طريق التضحية لإيقاظ إرادته للبقاء على قيد الحياة."
+    }
+},
 };
 export default ar;

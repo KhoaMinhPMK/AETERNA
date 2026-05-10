@@ -74,6 +74,9 @@ export async function initI18n() {
   const meta = SUPPORTED_LOCALES.find((l) => l.code === _locale);
   document.documentElement.lang = _locale;
   document.documentElement.dir  = meta?.dir ?? 'ltr';
+
+  /* Apply translations to any pre-rendered HTML elements on first load */
+  if (_locale !== 'en') applyDOMTranslations();
 }
 
 /* ── Public API ─────────────────────────────────────────────────────────── */

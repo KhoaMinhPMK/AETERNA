@@ -4,14 +4,13 @@ const tl = {
   nav: {
     logoSub: 'ASEAN Heritage RPG',
     platform: 'Platform',
+    features: 'Mga Tampok',
     atlas: 'Atlas',
-    impact: 'Epekto',
     manifesto: 'Manifesto',
     partner: 'Kasosyo',
     journeyMap: 'Mapa ng Paglalakbay',
     intro: 'Panimula',
     pillars: 'Haligi',
-    living: 'Buhay',
     openNav: 'Buksan ang navigation',
     closeNav: 'Isara ang navigation',
     goToIntro: 'Pumunta sa panimula',
@@ -20,7 +19,7 @@ const tl = {
     language: 'Wika',
     changeLanguage: 'Palitan ang wika',
   },
-  journeyNav: { ariaIntro: 'Pumunta sa seksyon ng panimula', ariaPillars: 'Pumunta sa seksyon ng haligi', ariaLiving: 'Pumunta sa seksyon ng pamana', ariaAtlas: 'Pumunta sa seksyon ng atlas', ariaImpact: 'Pumunta sa seksyon ng epekto', intro: 'Panimula', pillars: 'Haligi', living: 'Buhay', atlas: 'Atlas', impact: 'Epekto' },
+  journeyNav: { ariaIntro: 'Pumunta sa seksyon ng panimula', ariaVision: 'Pumunta sa seksyon ng solusyon', ariaPillars: 'Pumunta sa seksyon ng haligi', ariaFeatures: 'Pumunta sa seksyon ng mga tampok', ariaAtlas: 'Pumunta sa seksyon ng atlas', intro: 'Panimula', vision: 'Platform', pillars: 'Haligi', features: 'Mga Tampok', atlas: 'Atlas' },
   hero: { kicker: 'Pangunahing haligi ng karanasan', hudLabel: 'DOSYE NG AETERNA', nextPillar: 'Susunod na haligi', backToIntro: 'Bumalik sa panimula ng proyekto', projectIntro: 'Panimula ng Proyekto', ariaLabel: 'Mga haligi ng AETERNA', openPillar: 'Buksan ang haligi ng {{name}}' },
   bridge01: { eyebrow: 'mula sa manifesto patungong karanasan', text: 'Ang platform ay nagbibigay ng limang laruin na haligi na nagtatakda kung paano natututo, nararamdaman, at nabubuhay ang AETERNA.', aria: 'Transisyon mula sa panimula patungong haligi' },
   bridge02: { eyebrow: 'mula sa haligi patungong mundo', text: 'Ang nagsimula bilang disenyo ng sistema ay nagiging isang buhay na mundong pamana kung saan maaaring gumalaw, mag-impluwensya, at maalaala ng mga manlalaro.', aria: 'Transisyon mula sa haligi patungong pamana' },
@@ -59,8 +58,7 @@ const tl = {
     replayIntro: 'I-replay ang panimula',
     enterAtlas: 'Pumasok sa atlas',
     navPillars: 'Haligi',
-    navHeritage: 'Pamana',
-    navImpact: 'Epekto',
+    navFeatures: 'Mga Tampok',
     navAtlas: 'Atlas',
     scrollTop: '↑ Taas',
     ariaFooter: 'Finale ng AETERNA',
@@ -90,5 +88,120 @@ const tl = {
     o2o_impact: { name: 'O2O Impact', primaryTag: 'Mula sa Laro Tungo sa Katotohanan', secondaryTag: 'Turismo + SME', buttonLabel: 'Panimula ng Proyekto', description: 'Ang mga bihirang reward sa laro ay nakakonekta sa mga travel voucher, karanasan sa pamana, at mga produktong gawa ng kamay, ginagawang tunay na halaga ang virtual na pagtuklas.' },
     global_reach: { name: 'Global Reach', primaryTag: 'Mga Guild sa ASEAN', secondaryTag: 'Sustainable na Pangangalaga', buttonLabel: 'Panimula ng Proyekto', description: 'Iniuugnay ng AETERNA ang mga kabataang komunidad, institusyon, at pamahalaan sa isang shared heritage network na pinapatakbo ng kultural na kolaborasyon at mga misyon ng sustainability.' },
   },
+  solution: {
+    kicker: 'Paglalarawan ng Solusyon',
+    heading: 'Ano ang <em>AETERNA?</em>',
+    bodyP1: 'Ang Aeterna ay isang <strong class=\"sol-hl sol-hl--gold\">AAA Digital Heritage RPG Platform</strong> na gumagamit ng <strong class=\"sol-hl sol-hl--gold\">Narrative AI</strong> upang imortalisa ang kaluluwa ng <strong class=\"sol-hl sol-hl--gold\">ASEAN</strong>. Nilalampasan namin ang tradisyonal na paglalaro sa pamamagitan ng pagsasama ng <strong class=\"sol-hl sol-hl--gold\">patas na mekanika ng RPG</strong> sa isang <strong class=\"sol-hl sol-hl--gold\">Likas-kayang O2O na Ekonomiya</strong>.',
+    coreValue: '<span class="sol-hl sol-hl--teal">PANGUNAHING HALAGA:</span> Parangalan ang <strong class="sol-hl sol-hl--gold">pamana</strong> sa pamamagitan ng <strong class="sol-hl sol-hl--teal">teknolohiyang nakasentro sa tao</strong> upang itaguyod ang <strong class="sol-hl sol-hl--gold">ibinahaging kasaganaan</strong> at <strong class="sol-hl sol-hl--gold">makahulugang libangan.</strong>',
+    formulaVerb1: 'GAMITIN',
+    formulaNoun1: 'Teknolohiya',
+    formulaSub1: 'para sa',
+    formulaSubList1: 'Online-to-Offline',
+    formulaSubList2: 'Evolutionary Narrative AI',
+    formulaVerb2: 'PANGALAGAAN',
+    formulaNoun2: 'Pamana',
+    formulaSub2: 'sa pamamagitan ng',
+    formulaVerb3: 'BAGUHIN',
+    formulaNoun3: 'Digital na Mga Asset',
+    formulaNounSm: 'Heritage Metaverse',
+    visionLabel: 'Bisyon',
+    visionText: 'Maging nangungunang <strong class="sol-hl sol-hl--gold">digital heritage ecosystem</strong> sa mundo, kung saan ang lahat ng kultural na halaga ng sangkatauhan ay naimortal at maliwanag na muling ipinanganak sa panahon ng <strong class="sol-hl sol-hl--teal">Metaverse</strong>.',
+    missionLabel: 'Misyon',
+    mission1: '<strong class="sol-hl sol-hl--gold">Buhayin ang Pamana:</strong> Gamitin ang AI upang tulayin ang agwat ng henerasyon, ginagawang kaakit-akit na interaktibong karanasan ang malalim na makasaysayang dokumento.',
+    mission2: '<strong class="sol-hl sol-hl--gold">Imortal ang mga Halaga:</strong> I-digitize at pangalagaan ang kaluluwa ng kulturang ASEAN sa digital na espasyo para hindi ito maalis.',
+    mission3: '<strong class="sol-hl sol-hl--gold">Itaguyod ang Sustainable na Ekonomiya:</strong> Lumikha ng Hybrid O2O na modelong pang-ekonomiya na nagpapalit ng mga online na gumagamit bilang tunay na turista, sinusuportahan ang mga lokal na komunidad.',
+  },
+  heroIntro: {
+    eyebrow: 'Isang buhay na mundo mula sa Timog-silangang Asya',
+    title: 'AETERNA',
+    tagline: 'Mito · Alaala · Pamana',
+    cta: 'Tuklasin ang Mundo',
+  },
+
+  
+  sliderSection: {
+    kicker: "AETERNA · ASEAN CHRONICLES",
+    questLabel: "QUEST",
+    prev: "Previous nation",
+    next: "Next nation",
+    select: "Select {{name}}",
+    aria: "ASEAN Chronicles — 11 Nations"
+},
+  featuresSection: {
+    kicker: "Pangunahing Tampok",
+    heading: "Pitong Haligi ng <em>AETERNA</em>",
+    subheading: "Bawat tampok ay isang daan patungo sa buhay na mundo ng pamana — dinisenyo upang pangalagaan, ikonekta at magbigay inspirasyon.",
+    f1Title: "Personalisadong <span class='feature-card__title-highlight'>Misyon ng Pamana</span>",
+    f1Desc: "Nagsisimula ang Aeterna sa isang paglalakbay ng personal na kalayaan, kung saan ang mga manlalaro ay nag-aadbentura sa mga lupain ng pamana na nilikha gamit ang tumpak na 3D na teknolohiya.",
+    f2Title: "Makasaysayang <span class='feature-card__title-highlight'>Pagkakatawang-tao</span>",
+    f2Desc: "Ang puso ng laro ay ang mekanismong 'Makasaysayang Pagkakatawang-tao'. Sa pamamagitan ng sistema ng Gacha, nakakakuha ang mga manlalaro ng mga karakter mula sa 11 bansang ASEAN.",
+    f3Title: "Puntos ng <span class='feature-card__title-highlight'>Akumulasyon ng Kultura</span>",
+    f3Desc: "Upang maiwasan ang purong swerte, isinasama ng Aeterna ang 'Puntos ng Akumulasyon ng Kultura'. Bawat nabigong pagtatangka sa Gacha ay nagiging mahalagang mapagkukunan ng kaalaman.",
+    f4Title: "Ekonomiyang <span class='feature-card__title-highlight'>Pinapatakbo ng Manlalaro</span>",
+    f4Desc: "Nagtatag ang Aeterna ng ekonomiyang pinapatakbo ng manlalaro kung saan ang mga bihirang item ay nagiging mga digital asset na maaaring ipagpalit.",
+    f5Title: "Team-Based <span class='feature-card__title-highlight'>Raids & Eco Missions</span>",
+    f5Desc: "Binibigyang-diin ng laro ang synergy sa pamamagitan ng team-based raids at mga misyon tulad ng pag-aalis ng 'Halimaw ng Polusyon' at pagpapanumbalik ng ecosystem.",
+    f6Title: "Personal na Exhibit & <span class='feature-card__title-highlight'>Mga Kaganapan sa Komunidad</span>",
+    f6Desc: "Ang mga tampok ng personal na exhibit ay nagbibigay-daan sa mga gamer na ipahayag ang kanilang pagkakakilanlan at gawing instrumento ng koneksyon sa kultura ang kanilang koleksyon.",
+    f7Title: "Hybrid na Gantimpala — <span class='feature-card__title-highlight'>Mula Virtual Tungo sa Totoo</span>",
+    f7Desc: "Direktang ikinokonekta ng Aeterna ang turismo at tunay na konsumo sa pamamagitan ng hybrid reward model. Ang mga bihirang koleksyon ay nag-a-unlock ng mga tunay na pribilehiyo."
+  },
+  countries: {
+    "vietnam": {
+        "name": "VIETNAM",
+        "realm": "DIMENSYON NG HININGA",
+        "story": "Ang mga Ugat ng Dragon ay nagiging bato. Hanapin ang unang hininga ng mga ninuno upang matunaw ang bato at maibalik ang buhay."
+    },
+    "thailand": {
+        "name": "THAILAND",
+        "realm": "KAHARIAN NG BAGONG SILANG",
+        "story": "Ang ginto sa labas ay pumipigil sa kaluluwa ng bansa. Pasukin ang Puso ng Araw upang magising ang tunay na lakas."
+    },
+    "cambodia": {
+        "name": "CAMBODIA",
+        "realm": "MGA ALINGAWNGAW NG HIGANTENG BATO",
+        "story": "Nakalimutan na ng mga diyos na bato ang kanilang mga pangalan. Gumamit ng sinaunang musika upang ipaalala sa kanila."
+    },
+    "indonesia": {
+        "name": "INDONESIA",
+        "realm": "KAPULUAN NG MGA SUMASALAMIN NA KALULUWA",
+        "story": "Ang mga anino ay sinisira ng ulap. Balansehin ang Liwanag at Dilim upang hindi malamon ang mundo ng Chaos Barong."
+    },
+    "philippines": {
+        "name": "PILIPINAS",
+        "realm": "KAPULUAN NG MGA NAHULOG NA BITUIN",
+        "story": "Tumaas ang dagat ng abo. Ikonekta ang lakas ng Bayanihan upang muling pag-alabin ang pinakamaliwanag na apoy."
+    },
+    "malaysia": {
+        "name": "MALAYSIA",
+        "realm": "KUNG SAAN NAGTATAGPO ANG TATLONG HANGIN",
+        "story": "Sinusubukan ng isang kulay na gawing kulay abo ang puno ng mundo. Ipagtanggol ang pagkakaiba-iba ng ibat ibang lahi."
+    },
+    "singapore": {
+        "name": "SINGAPORE",
+        "realm": "KRISTAL NA KUTA NG PANAHON",
+        "story": "Tumatagas ang oras sa dagat. Hanapin ang pinagmulan nito upang maunawaan na ang hinaharap ay nangangailangan ng matibay na mga ugat."
+    },
+    "myanmar": {
+        "name": "MYANMAR",
+        "realm": "LUPAIN NG WALANG HANGGANG KAMPANA",
+        "story": "Nilulunok ng Katahimikan ang mga tunog. Kolektahin ang mga panginginig ng lupa upang lumikha ng isang dakilang symphony."
+    },
+    "laos": {
+        "name": "LAOS",
+        "realm": "ILOG NG MILYONG PUTING PANGARAP",
+        "story": "Yelo ang ilog. Tuklasin muli ang Apoy na Nagpapainit ng Kaluluwa upang matunaw ang yelo at buhayin ang mga pangarap."
+    },
+    "brunei": {
+        "name": "BRUNEI",
+        "realm": "MALALIM NA BALON AT ITIM NA GINTO",
+        "story": "Dinudumihan ng kasakiman ang memorya. Linisin ito ng mga Sumpa ng Karangalan upang mapanatili ang moralidad."
+    },
+    "timorLeste": {
+        "name": "TIMOR-LESTE",
+        "realm": "DUYAN NG SINAUNANG DIYOS BUWAYA",
+        "story": "Gustong matulog nang tuluyan ng buwaya. Isakripisyo ang pansariling interes para gisingin ang hangaring patuloy siyang mabuhay."
+    }
+},
 };
 export default tl;

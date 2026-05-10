@@ -4,14 +4,13 @@ const ms = {
   nav: {
     logoSub: 'ASEAN Heritage RPG',
     platform: 'Platform',
+    features: 'Ciri-ciri',
     atlas: 'Atlas',
-    impact: 'Impak',
     manifesto: 'Manifesto',
     partner: 'Rakan Kongsi',
     journeyMap: 'Peta Perjalanan',
     intro: 'Intro',
     pillars: 'Tiang',
-    living: 'Hidup',
     openNav: 'Buka navigasi',
     closeNav: 'Tutup navigasi',
     goToIntro: 'Pergi ke pengenalan',
@@ -20,7 +19,7 @@ const ms = {
     language: 'Bahasa',
     changeLanguage: 'Tukar bahasa',
   },
-  journeyNav: { ariaIntro: 'Pergi ke bahagian pengenalan', ariaPillars: 'Pergi ke bahagian tiang', ariaLiving: 'Pergi ke bahagian warisan hidup', ariaAtlas: 'Pergi ke bahagian atlas', ariaImpact: 'Pergi ke bahagian impak', intro: 'Intro', pillars: 'Tiang', living: 'Hidup', atlas: 'Atlas', impact: 'Impak' },
+  journeyNav: { ariaIntro: 'Pergi ke bahagian pengenalan', ariaVision: 'Pergi ke bahagian penyelesaian', ariaPillars: 'Pergi ke bahagian tiang', ariaFeatures: 'Pergi ke bahagian ciri-ciri', ariaAtlas: 'Pergi ke bahagian atlas', intro: 'Intro', vision: 'Platform', pillars: 'Tiang', features: 'Ciri-ciri', atlas: 'Atlas' },
   hero: { kicker: 'Tiang pengalaman teras', hudLabel: 'DOSIER AETERNA', nextPillar: 'Tiang seterusnya', backToIntro: 'Kembali ke pengenalan projek', projectIntro: 'Pengenalan Projek', ariaLabel: 'Tiang-tiang AETERNA', openPillar: 'Buka tiang {{name}}' },
   bridge01: { eyebrow: 'dari manifesto ke pengalaman', text: 'Platform ini terwujud menjadi lima tiang yang boleh dimainkan yang mentakrifkan bagaimana AETERNA dipelajari, dirasai dan dihayati.', aria: 'Peralihan dari pengenalan ke tiang' },
   bridge02: { eyebrow: 'dari tiang ke dunia', text: 'Apa yang bermula sebagai reka bentuk sistem menjadi dunia warisan hidup yang boleh dilalui, dipengaruhi dan diingati pemain.', aria: 'Peralihan dari tiang ke warisan hidup' },
@@ -59,8 +58,7 @@ const ms = {
     replayIntro: 'Main semula pengenalan',
     enterAtlas: 'Masuk atlas',
     navPillars: 'Tiang',
-    navHeritage: 'Warisan',
-    navImpact: 'Impak',
+    navFeatures: 'Ciri-ciri',
     navAtlas: 'Atlas',
     scrollTop: '↑ Atas',
     ariaFooter: 'Finale AETERNA',
@@ -90,5 +88,120 @@ const ms = {
     o2o_impact: { name: 'Impak O2O', primaryTag: 'Dari Permainan ke Realiti', secondaryTag: 'Pelancongan + PKS', buttonLabel: 'Pengenalan Projek', description: 'Ganjaran langka dalam permainan berhubung dengan baucar perjalanan, pengalaman warisan dan produk pengrajin, mengubah penemuan maya menjadi nilai nyata yang boleh diukur.' },
     global_reach: { name: 'Jangkauan Global', primaryTag: 'Guild Rentas ASEAN', secondaryTag: 'Pemeliharaan Lestari', buttonLabel: 'Pengenalan Projek', description: 'AETERNA menghubungkan komuniti muda, institusi dan kerajaan dalam jaringan warisan bersama yang dipacu oleh kerjasama budaya, pandangan data dan misi kemampanan.' },
   },
+  solution: {
+    kicker: 'Penerangan Penyelesaian',
+    heading: 'Apakah itu <em>AETERNA?</em>',
+    bodyP1: 'Aeterna ialah <strong class=\"sol-hl sol-hl--gold\">Platform RPG Warisan Digital AAA</strong> yang menggunakan <strong class=\"sol-hl sol-hl--gold\">AI Naratif</strong> untuk mengabadikan jiwa <strong class=\"sol-hl sol-hl--gold\">ASEAN</strong>. Kami mengatasi permainan tradisional dengan menggabungkan <strong class=\"sol-hl sol-hl--gold\">mekanik RPG yang adil</strong> dengan <strong class=\"sol-hl sol-hl--gold\">Ekonomi O2O yang mampan</strong>.',
+    coreValue: '<span class="sol-hl sol-hl--teal">NILAI TERAS:</span> Menghormati <strong class="sol-hl sol-hl--gold">warisan</strong> melalui <strong class="sol-hl sol-hl--teal">teknologi berpusatkan manusia</strong> untuk mendorong <strong class="sol-hl sol-hl--gold">kemakmuran bersama</strong> dan <strong class="sol-hl sol-hl--gold">hiburan bermakna.</strong>',
+    formulaVerb1: 'GUNA',
+    formulaNoun1: 'Teknologi',
+    formulaSub1: 'untuk',
+    formulaSubList1: 'Online-to-Offline',
+    formulaSubList2: 'AI Naratif Evolusioner',
+    formulaVerb2: 'PELIHARA',
+    formulaNoun2: 'Warisan',
+    formulaSub2: 'dengan',
+    formulaVerb3: 'TRANSFORMASI',
+    formulaNoun3: 'Aset Digital',
+    formulaNounSm: 'Metaverse Warisan',
+    visionLabel: 'Visi',
+    visionText: 'Menjadi <strong class="sol-hl sol-hl--gold">ekosistem warisan digital</strong> terkemuka di dunia, di mana semua nilai budaya umat manusia diabadikan dan dilahirkan semula dalam era <strong class="sol-hl sol-hl--teal">Metaverse</strong>.',
+    missionLabel: 'Misi',
+    mission1: '<strong class="sol-hl sol-hl--gold">Menghidupkan Warisan:</strong> Memanfaatkan AI untuk merapatkan jurang generasi, mengubah dokumen sejarah menjadi pengalaman interaktif yang mempesonakan.',
+    mission2: '<strong class="sol-hl sol-hl--gold">Mengabadikan Nilai:</strong> Mendigitalkan dan memelihara jiwa budaya ASEAN dalam ruang digital agar tidak pernah pudar.',
+    mission3: '<strong class="sol-hl sol-hl--gold">Mempromosi Ekonomi Lestari:</strong> Mewujudkan model ekonomi Hibrid O2O yang mengubah pengguna dalam talian menjadi pelancong nyata, menyokong komuniti tempatan.',
+  },
+  heroIntro: {
+    eyebrow: 'Sebuah dunia hidup dari Asia Tenggara',
+    title: 'AETERNA',
+    tagline: 'Mitos · Kenangan · Warisan',
+    cta: 'Terokai Dunia',
+  },
+
+  
+  sliderSection: {
+    kicker: "AETERNA · ASEAN CHRONICLES",
+    questLabel: "QUEST",
+    prev: "Previous nation",
+    next: "Next nation",
+    select: "Select {{name}}",
+    aria: "ASEAN Chronicles — 11 Nations"
+},
+  featuresSection: {
+    kicker: "Ciri Utama",
+    heading: "Tujuh Tiang <em>AETERNA</em>",
+    subheading: "Setiap ciri adalah pintu masuk ke dunia warisan yang hidup — direka untuk memelihara, menghubungkan dan memberi inspirasi.",
+    f1Title: "Misi <span class='feature-card__title-highlight'>Warisan Peribadi</span>",
+    f1Desc: "Aeterna bermula dengan perjalanan pembebasan peribadi, di mana pemain menerokai tanah warisan yang dibina semula dengan teknologi 3D tepat.",
+    f2Title: "<span class='feature-card__title-highlight'>Penjelmaan</span> Sejarah",
+    f2Desc: "Teras permainan ialah mekanisme 'Penjelmaan Sejarah'. Melalui sistem Gacha, pemain memperoleh watak berdasarkan wira dari 11 negara ASEAN.",
+    f3Title: "Mata <span class='feature-card__title-highlight'>Pengumpulan Budaya</span>",
+    f3Desc: "Untuk mengelak nasib semata-mata, Aeterna menggabungkan 'Mata Pengumpulan Budaya'. Setiap percubaan Gacha yang gagal ditukar kepada sumber pengetahuan bernilai.",
+    f4Title: "Ekonomi <span class='feature-card__title-highlight'>Didorong Pemain</span>",
+    f4Desc: "Aeterna membina ekonomi yang didorong pemain di mana item nadir menjadi aset digital yang boleh didagangkan.",
+    f5Title: "Serbuan <span class='feature-card__title-highlight'>Pasukan & Misi Ekologi</span>",
+    f5Desc: "Permainan menekankan sinergi melalui serbuan pasukan dan misi kontemporari seperti membasmi 'Raksasa Pencemaran' dan memulihkan ekosistem.",
+    f6Title: "Pameran Peribadi & <span class='feature-card__title-highlight'>Acara Komuniti</span>",
+    f6Desc: "Ciri pameran peribadi membolehkan pemain menonjolkan keperibadian mereka dan mengubah koleksi warisan menjadi kebanggaan dan alat hubungan budaya.",
+    f7Title: "Ganjaran Hibrid — <span class='feature-card__title-highlight'>Maya ke Nyata</span>",
+    f7Desc: "Aeterna menghubungkan pelancongan dan penggunaan sebenar secara langsung melalui model ganjaran hibrid. Koleksi nadir membuka keistimewaan seperti baucar perkhidmatan."
+  },
+  countries: {
+    "vietnam": {
+        "name": "VIETNAM",
+        "realm": "DIMENSI NAFAS DAN NAGA",
+        "story": "Nadi Naga membatu. Cari Nafas Pertama nenek moyang untuk mencairkan batu dan memulihkan putaran kehidupan."
+    },
+    "thailand": {
+        "name": "THAILAND",
+        "realm": "KERAJAAN CAHAYA EMAS",
+        "story": "Lapisan emas luar memeranjatkan roh negara. Susup Teras Matahari untuk menyedarkan daya sebenar di sebalik kemewahan."
+    },
+    "cambodia": {
+        "name": "KEMBOJA",
+        "realm": "GEMA GERGASI BATU",
+        "story": "Dewa batu lupa identiti mereka, menyebabkan runtuhan. Gunakan tarian dan muzik untuk mengembalikan memori tuhan."
+    },
+    "indonesia": {
+        "name": "INDONESIA",
+        "realm": "KEPULAUAN JIWA TERPANTUL",
+        "story": "Bayang memisahkan diri menjadi kekacauan Barong. Seimbangkan Cahaya dan Kegelapan sebelum dunia ditelan."
+    },
+    "philippines": {
+        "name": "FILIPINA",
+        "realm": "KEPULAUAN BINTANG JATUH",
+        "story": "Lautan abu mengatasi bintang. Gunakan semangat Bayanihan komuniti untuk membangkitkan terang dalam kegelapan lautan."
+    },
+    "malaysia": {
+        "name": "MALAYSIA",
+        "realm": "TEMPAT TIGA ANGIN BERKUMPUL",
+        "story": "Parasit memusnahkan warna-warni asas dahan. Pertahankan kepelbagaian kaum, serta satukan ketiga-tiga angin tersebut menjadi perisai."
+    },
+    "singapore": {
+        "name": "SINGAPURA",
+        "realm": "KUBU KRISTAL MASA",
+        "story": "Masa menjadi surut di laut. Cari asas masa silam Temasek agar membina akar kukuh pada masa depan kaca mutlak ini."
+    },
+    "myanmar": {
+        "name": "MYANMAR",
+        "realm": "TANAH LOCENG ABADI",
+        "story": "Hukuman kesunyian memadam bunyi. Gabungkan getaran frekuensi kesetiaan untuk menciptakan sebuah lagu kemenangan."
+    },
+    "laos": {
+        "name": "LAOS",
+        "realm": "SUNGAI IMPIAN PUTIH",
+        "story": "Sungai dibekukan oleh kurang prihatin. Hasilkan daya api semangat untuk meneruskan laluan alir kasih sayang dan harapan."
+    },
+    "brunei": {
+        "name": "BRUNEI",
+        "realm": "TELAGA EMAS HITAM",
+        "story": "Rakus mencemar memori berharga. Sucikan kekotoran ini menggunakan Sumpah Kehormatan pada ketauhidan adat silam."
+    },
+    "timorLeste": {
+        "name": "TIMOR-LESTE",
+        "realm": "BUAIAN NENEK MOYANG BUAYA",
+        "story": "Buaya ingin lelap selamanya. Berkorban menentang nafsu peribadi demi meyakinkan iltizam Buaya Suci untuk kekal bangkit."
+    }
+},
 };
 export default ms;

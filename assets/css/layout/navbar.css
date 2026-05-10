@@ -120,6 +120,9 @@
   text-transform: uppercase;
   color: rgba(219, 238, 210, 0.62);
   transition: color 0.3s ease;
+  position: relative;
+  left: 10px;
+  bottom: 8px;
 }
 
 #navbar.is-light .navbar__logo-word {
@@ -192,6 +195,61 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+}
+
+/* ── Language toggle ── */
+.navbar__lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(223, 255, 210, 0.22);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(235, 248, 228, 0.90);
+  flex-shrink: 0;
+  transition: background 0.24s ease, border-color 0.24s ease, color 0.24s ease;
+}
+
+.navbar__lang-active {
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.navbar__lang-sep {
+  color: rgba(200, 230, 190, 0.30);
+  font-weight: 400;
+  margin: 0 1px;
+}
+
+.navbar__lang-other {
+  color: rgba(200, 230, 190, 0.46);
+}
+
+.navbar__lang-toggle:hover {
+  background: rgba(200, 255, 180, 0.10);
+  border-color: rgba(200, 255, 180, 0.38);
+  color: #fff;
+}
+
+.navbar__lang-toggle:hover .navbar__lang-other {
+  color: rgba(220, 248, 210, 0.72);
+}
+
+#navbar.is-light .navbar__lang-toggle {
+  border-color: rgba(63, 101, 73, 0.26);
+  background: rgba(63, 101, 73, 0.06);
+  color: rgba(28, 48, 34, 0.88);
+}
+
+#navbar.is-light .navbar__lang-toggle:hover {
+  background: rgba(63, 101, 73, 0.12);
 }
 
 .btn-login,
@@ -393,6 +451,7 @@
 }
 
 @media (min-width: 961px) {
+
   .navbar__mobile-panel,
   .navbar__mobile-backdrop {
     display: none;
@@ -412,6 +471,13 @@
   .navbar__links,
   .navbar__auth {
     display: none;
+  }
+
+  /* Keep lang toggle visible on mobile next to hamburger */
+  .navbar__lang-toggle {
+    height: 32px;
+    padding: 0 10px;
+    font-size: 10px;
   }
 
   .navbar__menu-btn {

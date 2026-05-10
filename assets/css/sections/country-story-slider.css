@@ -1,0 +1,577 @@
+/* ================================================
+   Country Story Slider (css__ prefix)
+   Full-screen cinematic narrative slider — 11 ASEAN nations
+   All sizes use fluid clamp() for viewport-responsive scaling.
+   ================================================ */
+
+/* ── Section container ─────────────────────────────────────── */
+#slider-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;           /* exactly one viewport tall */
+  min-height: 600px;
+  max-height: 1080px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ── Background image layer ───────────────────────────────── */
+.css__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.css__bg-img {
+  position: absolute;
+  inset: -5%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.css__bg-img.bg-zoom {
+  animation: cssZoomIn 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes cssZoomIn {
+  from { transform: scale(1.12); }
+  to   { transform: scale(1.02); }
+}
+
+/* Dark veil — stronger on left so text is readable */
+.css__bg-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(100deg,
+      rgba(4, 10, 7, 0.92)  0%,
+      rgba(4, 10, 7, 0.72) 30%,
+      rgba(4, 10, 7, 0.28) 58%,
+      rgba(4, 10, 7, 0.04) 100%),
+    linear-gradient(180deg,
+      rgba(4, 10, 7, 0.50)  0%,
+      rgba(4, 10, 7, 0.00) 25%,
+      rgba(4, 10, 7, 0.00) 60%,
+      rgba(4, 10, 7, 0.80) 100%);
+}
+
+/* Film grain */
+.css__bg-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* ── Section header bar ───────────────────────────────────── */
+.css__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  /* vertical: matches navbar height; horizontal: clears journey-nav sidebar */
+  padding: clamp(16px, 2.6vh, 28px) clamp(20px, 4vw, 64px);
+}
+
+.css__header-kicker {
+  font-family: var(--font-ui);
+  font-size: clamp(8px, 0.6vw, 10px);
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(208, 236, 197, 0.44);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.css__header-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(208, 236, 197, 0.18) 0%, transparent 100%);
+}
+
+.css__header-count {
+  font-family: var(--font-ui);
+  font-size: clamp(8px, 0.6vw, 10px);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: rgba(208, 236, 197, 0.34);
+  flex-shrink: 0;
+  transition: color 0.4s ease;
+}
+
+/* ── Story panel ──────────────────────────────────────────── */
+/*
+   Key layout rules:
+   • top / transform centre the panel vertically in the viewport
+   • The navbar is ~60–80px tall; the thumb strip ~130–160px; remaining ~60–80% for story
+   • We push top to ~52% to nudge below navbar, then translate up by 44%
+   • left must clear the journey-rail sidebar (≈ 38px) + a margin
+*/
+.css__story {
+  position: absolute;
+  left: clamp(56px, 6.8vw, 124px);   /* clears 38px journey-nav + breathing room */
+  top: 52%;
+  transform: translateY(-48%);
+  z-index: 20;
+  /* width: 38 vw on desktop, shrinks on smaller screens */
+  width: min(clamp(240px, 34vw, 520px), 48%);
+  pointer-events: all;
+  transition: opacity 0.32s ease, transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Slide transitions */
+.css__story.exit-left  { opacity: 0; transform: translateY(-48%) translateX(-36px); pointer-events: none; }
+.css__story.exit-right { opacity: 0; transform: translateY(-48%) translateX( 36px); pointer-events: none; }
+.css__story.enter-right { opacity: 0; transform: translateY(-48%) translateX( 52px); }
+.css__story.enter-left  { opacity: 0; transform: translateY(-48%) translateX(-52px); }
+
+/* ── Ghost serial number ────────────────────────────────── */
+.css__story-serial {
+  font-family: var(--font-display);
+  /* scale: 4.8 vw gives ~49px @1024, ~72px @1440, clamped 40–88px */
+  font-size: clamp(40px, 4.8vw, 88px);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.05);
+  margin-bottom: -0.1em;
+  user-select: none;
+}
+
+/* ── Eyebrow / realm subtitle ───────────────────────────── */
+.css__story-eyebrow {
+  font-family: var(--font-ui);
+  /* ~9px @1024px */
+  font-size: clamp(7px, 0.7vw, 10px);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(100, 220, 180, 0.80);
+  margin-bottom: clamp(4px, 0.8vh, 10px);
+  line-height: 1.55;
+  /* wrap is fine — just don't let it balloon */
+  max-width: 100%;
+}
+
+/* ── Country name headline ──────────────────────────────── */
+.css__story-name {
+  font-family: var(--font-display);
+  /*
+     Target: looks good at ~48–56px on 1024px screen.
+     3.8 vw → 38.9px @1024 → clamped min 30px, max 68px
+     On 1280: 48.6px  On 1440: 54.7px  On 1920: 68px (capped)
+  */
+  font-size: clamp(30px, 3.8vw, 68px);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1.0;
+  background: linear-gradient(150deg, #ffffff 10%, #c8f0e8 55%, #43dfc6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.65)) drop-shadow(0 0 32px rgba(67, 223, 198, 0.25));
+  margin: 0 0 clamp(10px, 1.6vh, 20px);
+  white-space: nowrap;
+}
+
+/* Divider */
+.css__story-divider {
+  width: clamp(32px, 3.6vw, 64px);
+  height: 2px;
+  background: linear-gradient(90deg, rgba(67, 223, 198, 0.85) 0%, transparent 100%);
+  margin-bottom: clamp(8px, 1.4vh, 18px);
+  border-radius: 2px;
+}
+
+/* Quest label */
+.css__story-quest-label {
+  font-family: var(--font-ui);
+  font-size: clamp(7px, 0.6vw, 9px);
+  font-weight: 600;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: rgba(100, 220, 180, 0.55);
+  margin: 0 0 clamp(4px, 0.7vh, 8px);
+}
+
+/* Quest story text */
+.css__story-quest {
+  font-family: var(--font-body, var(--font-ui));
+  /* ~13px @1024, capped 15px */
+  font-size: clamp(11px, 0.92vw, 15px);
+  font-weight: 400;
+  line-height: 1.78;
+  color: rgba(228, 244, 226, 0.82);
+  margin: 0 0 clamp(16px, 2.4vh, 32px);
+  max-width: 100%;
+}
+
+/* Nav buttons */
+.css__story-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.css__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* ~44px @1024 */
+  width: clamp(38px, 3.4vw, 58px);
+  height: clamp(38px, 3.4vw, 58px);
+  border-radius: 50%;
+  border: 1px solid rgba(221, 255, 214, 0.15);
+  background: linear-gradient(180deg, rgba(18, 34, 22, 0.72) 0%, rgba(12, 24, 16, 0.54) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  color: rgba(230, 248, 224, 0.88);
+  transition: background 0.22s ease, border-color 0.22s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.css__btn:hover {
+  background: linear-gradient(180deg, rgba(67, 223, 198, 0.18) 0%, rgba(67, 223, 198, 0.07) 100%);
+  border-color: rgba(67, 223, 198, 0.48);
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(67, 223, 198, 0.18);
+}
+
+.css__btn svg {
+  width: clamp(14px, 1.2vw, 20px);
+  height: clamp(14px, 1.2vw, 20px);
+}
+
+/* ── Progress bar ─────────────────────────────────────────── */
+/*
+   Sit between the story actions and the thumb strip.
+   Use bottom relative to strip height (≈ strip-wrap padding + thumb height).
+   thumb height at 3/4 ratio with width ~8vw → ~10.7vw; clamp to 100–145px.
+   strip-wrap padding ~18px top + thumb ~120px + some breathing → ~150px.
+*/
+.css__progress {
+  position: absolute;
+  bottom: clamp(140px, 19vh, 190px);
+  left: clamp(56px, 6.8vw, 124px);
+  width: clamp(160px, 24vw, 400px);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 2px;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.css__progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, rgba(67, 223, 198, 0.92) 0%, rgba(100, 220, 180, 0.48) 100%);
+  border-radius: 2px;
+}
+
+/* ── Thumbnail strip ──────────────────────────────────────── */
+.css__strip-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: clamp(10px, 1.6vh, 20px) clamp(12px, 2.4vw, 40px);
+  background: linear-gradient(to top, rgba(4, 10, 7, 0.85) 0%, rgba(4, 10, 7, 0.0) 100%);
+  /* NO mask — was hiding thumbnails at left/right edges */
+}
+
+.css__strip {
+  display: flex;
+  gap: clamp(6px, 0.7vw, 12px);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  user-select: none;
+  padding-bottom: 2px;
+  /* align items to bottom so active-raised cards don't expand strip height */
+  align-items: flex-end;
+}
+
+.css__strip::-webkit-scrollbar { display: none; }
+.css__strip.is-dragging { cursor: grabbing; }
+
+/* Individual thumbnail */
+.css__thumb {
+  position: relative;
+  flex-shrink: 0;
+  /*
+     Reduced: ~59px @1024  ~80px @1440  cap 96px
+     Ensures all 11 fit in one row on most screens without scrolling.
+  */
+  width: clamp(56px, 5.8vw, 96px);
+  aspect-ratio: 3 / 4;
+  border-radius: clamp(8px, 0.8vw, 14px);
+  overflow: hidden;
+  border: 1px solid rgba(221, 255, 214, 0.10);
+  cursor: pointer;
+  transition:
+    transform   0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow  0.32s ease,
+    border-color 0.32s ease,
+    filter       0.32s ease;
+  filter: saturate(0.65) brightness(0.72);
+}
+
+.css__thumb:hover {
+  transform: translateY(-5px) scale(1.04);
+  filter: saturate(0.95) brightness(0.92);
+}
+
+.css__thumb.is-active {
+  border-color: rgba(67, 223, 198, 0.74);
+  box-shadow: 0 0 0 2px rgba(67, 223, 198, 0.26), 0 12px 28px rgba(0,0,0,0.55);
+  transform: translateY(-7px) scale(1.05);
+  filter: saturate(1.08) brightness(1.04);
+}
+
+.css__thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  transition: transform 0.48s ease;
+}
+.css__thumb:hover .css__thumb-img,
+.css__thumb.is-active .css__thumb-img {
+  transform: scale(1.07);
+}
+
+/* Overlay gradient on thumb */
+.css__thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(4, 10, 7, 0.72) 0%, rgba(4, 10, 7, 0.10) 50%, transparent 100%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Serial on thumb */
+.css__thumb-serial {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: clamp(9px, 0.9vw, 14px);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.16);
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+/* Country name on thumb */
+.css__thumb-name {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 2;
+  padding: 16px 6px 6px;
+  font-family: var(--font-display);
+  font-size: clamp(6px, 0.56vw, 9px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(230, 248, 220, 0.88);
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Active indicator bar */
+.css__thumb-active-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 3;
+  height: 3px;
+  background: linear-gradient(90deg,
+    rgba(67, 223, 198, 0.0)   0%,
+    rgba(67, 223, 198, 0.92) 50%,
+    rgba(67, 223, 198, 0.0) 100%);
+  transform: scaleX(0);
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 3px;
+}
+.css__thumb.is-active .css__thumb-active-bar {
+  transform: scaleX(1);
+}
+
+/* Stagger reveal handled in JS (CountryStorySlider.js) to avoid is-visible cycling issues */
+
+/* ================================================================
+   RESPONSIVE BREAKPOINTS
+   ================================================================ */
+
+/* ── Large desktop (≥ 1600px) — just loosen limits slightly ── */
+@media (min-width: 1600px) {
+  .css__story {
+    left: clamp(80px, 7.2vw, 140px);
+    width: clamp(420px, 32vw, 560px);
+  }
+
+  .css__story-name {
+    font-size: clamp(48px, 3.6vw, 72px);
+  }
+
+  .css__progress {
+    left: clamp(80px, 7.2vw, 140px);
+    bottom: clamp(160px, 18vh, 210px);
+  }
+}
+
+/* ── 1280 – 1599 px – standard laptop / monitor ── */
+@media (min-width: 1281px) and (max-width: 1599px) {
+  .css__story {
+    left: clamp(64px, 6vw, 110px);
+    width: clamp(340px, 35vw, 520px);
+  }
+}
+
+/* ── Tablet landscape 769–1280px ───────────────────────────── */
+@media (max-width: 1280px) {
+  .css__story {
+    left: clamp(52px, 5.6vw, 90px);
+    width: min(clamp(240px, 44vw, 460px), 52%);
+  }
+
+  .css__story-name {
+    font-size: clamp(26px, 3.6vw, 56px);
+  }
+
+  .css__story-serial {
+    font-size: clamp(36px, 4.2vw, 72px);
+  }
+
+  .css__story-quest {
+    font-size: clamp(10px, 0.88vw, 14px);
+  }
+
+  .css__progress {
+    left: clamp(52px, 5.6vw, 90px);
+    width: clamp(140px, 22vw, 340px);
+    bottom: clamp(130px, 17.5vh, 180px);
+  }
+
+  .css__thumb {
+    width: clamp(52px, 6.8vw, 88px);
+  }
+}
+
+/* ── Tablet portrait / large phone (≤ 768px) ──────────────── */
+@media (max-width: 768px) {
+  #slider-section {
+    height: auto;
+    min-height: 100svh;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Story panel becomes in-flow, not absolutely positioned */
+  .css__story {
+    position: relative;
+    left: auto; top: auto;
+    transform: none;
+    width: 100%;
+    flex: 1;
+    padding: clamp(80px, 14vh, 120px) clamp(18px, 5vw, 36px) 0;
+    /* reset animation transforms for mobile */
+  }
+
+  .css__story.exit-left  { transform: translateX(-26px); opacity: 0; }
+  .css__story.exit-right { transform: translateX( 26px); opacity: 0; }
+  .css__story.enter-right { transform: translateX( 38px); opacity: 0; }
+  .css__story.enter-left  { transform: translateX(-38px); opacity: 0; }
+
+  .css__story-serial {
+    font-size: clamp(44px, 16vw, 88px);
+  }
+
+  .css__story-name {
+    font-size: clamp(26px, 8vw, 48px);
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .css__story-eyebrow {
+    font-size: clamp(7px, 2vw, 10px);
+  }
+
+  .css__story-quest {
+    font-size: clamp(12px, 3.2vw, 15px);
+    line-height: 1.7;
+  }
+
+  /* Progress floats just above thumb strip */
+  .css__progress {
+    position: relative;
+    left: auto; bottom: auto;
+    width: calc(100% - clamp(36px, 10vw, 72px));
+    margin: clamp(12px, 2vh, 20px) auto 0;
+  }
+
+  .css__header {
+    padding: clamp(14px, 2vh, 22px) clamp(18px, 5vw, 36px);
+  }
+
+  .css__strip-wrap {
+    padding: 8px 12px 14px;
+    /* no mask on mobile either — use padding for breathing room */
+  }
+
+  .css__strip {
+    gap: 8px;
+    padding: 0 18px 2px;
+  }
+
+  .css__thumb {
+    width: clamp(52px, 17vw, 82px);
+    border-radius: 10px;
+    filter: saturate(0.78) brightness(0.78);
+  }
+}
+
+/* ── Small phone (≤ 480px) ─────────────────────────────────── */
+@media (max-width: 480px) {
+  .css__story {
+    padding-top: clamp(70px, 12vh, 100px);
+  }
+
+  .css__story-name {
+    font-size: clamp(24px, 9.5vw, 38px);
+  }
+
+  .css__thumb {
+    width: clamp(48px, 16vw, 68px);
+  }
+}
+
+/* ── Very small / landscape on phone (≤ 380px) ─────────────── */
+@media (max-width: 380px) {
+  .css__story-name {
+    font-size: clamp(22px, 10vw, 34px);
+  }
+
+  .css__thumb {
+    width: 48px;
+  }
+}

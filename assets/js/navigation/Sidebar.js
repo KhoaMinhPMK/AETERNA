@@ -6,9 +6,10 @@
 import { ASSETS } from '../content/assets.js';
 
 const ICONS = [
-  { src: ASSETS.iconHome,  label: 'Home',  active: true  },
-  { src: ASSETS.iconMusic, label: 'Atlas', active: false },
-  { src: ASSETS.iconStats, label: 'Impact', active: false },
+  { src: ASSETS.iconHome,  label: 'Home',     target: 'hero-section',     active: true  },
+  { src: ASSETS.iconMusic, label: 'Pillars',  target: 'slider-section',   active: false },
+  { src: ASSETS.iconStar,  label: 'Features', target: 'features-section', active: false },
+  { src: ASSETS.iconArrow, label: 'Atlas',    target: 'world-section',    active: false },
 ];
 
 export function Sidebar(container) {
@@ -19,6 +20,7 @@ export function Sidebar(container) {
         type="button"
         aria-label="${icon.label}"
         title="${icon.label}"
+        data-target="${icon.target}"
       >
         <img src="${icon.src}" alt="${icon.label}" loading="lazy" />
       </button>
@@ -33,10 +35,14 @@ export function Sidebar(container) {
     </div>
   `;
 
-  /* Toggle active state */
+  /* Toggle active state & scroll */
   const buttons = container.querySelectorAll('.sidebar__icon-wrap');
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      if (window.smoothScrollToSection) {
+        window.smoothScrollToSection(targetId);
+      }
       buttons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
     });

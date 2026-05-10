@@ -1,310 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AETERNA</title>
-    <link rel="icon" type="image/svg+xml" href="assets/media/images/backgrounds/logo.svg" />
 
-    <!-- Fonts (non-blocking: preload → swap to stylesheet after parse) -->
-    <link rel="dns-prefetch" href="https://www.figma.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AETERNA</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thanlodeton125.github.io/AET/" />
+  <meta property="og:title" content="AETERNA - ASEAN Heritage RPG" />
+  <meta property="og:description"
+    content="A living world built from myth, memory and the real routes of Southeast Asia." />
+  <meta property="og:image" content="https://thanlodeton125.github.io/AET/assets/media/images/backgrounds/bg.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://thanlodeton125.github.io/AET/" />
+  <meta property="twitter:title" content="AETERNA - ASEAN Heritage RPG" />
+  <meta property="twitter:description"
+    content="A living world built from myth, memory and the real routes of Southeast Asia." />
+  <meta property="twitter:image"
+    content="https://thanlodeton125.github.io/AET/assets/media/images/backgrounds/bg.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/media/images/backgrounds/logo.svg" />
+
+  <!-- Fonts (non-blocking: preload → swap to stylesheet after parse) -->
+  <link rel="dns-prefetch" href="https://www.figma.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap"
+    onload="this.rel='stylesheet'" />
+  <noscript>
     <link
-      rel="preload"
-      as="style"
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap"
-      onload="this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
+      rel="stylesheet" />
+  </noscript>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body>
-    <!-- ============================================================
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/layout/lang-switcher.css" />
+  <link rel="stylesheet" href="assets/css/sections/country-story-slider.css" />
+  <link rel="stylesheet" href="assets/css/sections/features.css" />
+</head>
+
+<body>
+  <!-- ============================================================
          Preloader — covers screen until all critical assets are ready
          ============================================================ -->
-    <div id="preloader" role="status" aria-label="Loading AETERNA">
-      <div class="preloader__inner">
-        <img
-          class="preloader__logo-img"
-          src="assets/media/images/backgrounds/logo.svg"
-          alt=""
-          aria-hidden="true"
-        />
-        <p class="preloader__wordmark">AETERNA</p>
-        <div class="preloader__track" aria-hidden="true">
-          <div class="preloader__fill" id="preloader-fill"></div>
-        </div>
-        <p class="preloader__status" id="preloader-status">Initialising world…</p>
+  <div id="preloader" role="status" aria-label="Loading AETERNA">
+    <div class="preloader__inner">
+      <img class="preloader__logo-img" src="assets/media/images/backgrounds/logo.svg" alt="" aria-hidden="true" />
+      <p class="preloader__wordmark">AETERNA</p>
+      <div class="preloader__track" aria-hidden="true">
+        <div class="preloader__fill" id="preloader-fill"></div>
       </div>
+      <p class="preloader__status" id="preloader-status">Initialising world…</p>
     </div>
+  </div>
 
-    <div id="app">
-      <!-- Dark gradient overlay for header -->
-      <div id="header-overlay" aria-hidden="true"></div>
+  <div id="app">
+    <!-- Dark gradient overlay for header -->
+    <div id="header-overlay" aria-hidden="true"></div>
 
-      <!-- Top navigation -->
-      <header id="navbar"></header>
+    <!-- Top navigation -->
+    <header id="navbar"></header>
 
-      <!-- Left side navigation -->
-      <aside id="sidebar"></aside>
+    <!-- Left side navigation -->
+    <aside id="sidebar"></aside>
 
-      <!-- Journey rail -->
-      <nav id="journey-nav" class="journey-nav" aria-label="Narrative journey">
-        <button class="journey-nav__link active" type="button" data-target="hero-section" data-i18n-aria="journeyNav.ariaIntro" aria-label="Go to introduction section">
-          <span class="journey-nav__index">01</span>
-          <span class="journey-nav__label" data-i18n="journeyNav.intro">Intro</span>
-        </button>
-        <button class="journey-nav__link" type="button" data-target="slider-section" data-i18n-aria="journeyNav.ariaPillars" aria-label="Go to pillars section">
-          <span class="journey-nav__index">02</span>
-          <span class="journey-nav__label" data-i18n="journeyNav.pillars">Pillars</span>
-        </button>
-        <button class="journey-nav__link" type="button" data-target="video-section" data-i18n-aria="journeyNav.ariaLiving" aria-label="Go to living heritage section">
-          <span class="journey-nav__index">03</span>
-          <span class="journey-nav__label" data-i18n="journeyNav.living">Living</span>
-        </button>
-        <button class="journey-nav__link" type="button" data-target="world-section" data-i18n-aria="journeyNav.ariaAtlas" aria-label="Go to atlas section">
-          <span class="journey-nav__index">04</span>
-          <span class="journey-nav__label" data-i18n="journeyNav.atlas">Atlas</span>
-        </button>
-        <button class="journey-nav__link" type="button" data-target="video-section-2" data-i18n-aria="journeyNav.ariaImpact" aria-label="Go to impact section">
-          <span class="journey-nav__index">05</span>
-          <span class="journey-nav__label" data-i18n="journeyNav.impact">Impact</span>
-        </button>
-      </nav>
+    <!-- Journey rail -->
+    <nav id="journey-nav" class="journey-nav" aria-label="Narrative journey">
+      <button class="journey-nav__link active" type="button" data-target="hero-section"
+        data-i18n-aria="journeyNav.ariaIntro" aria-label="Go to introduction section">
+        <span class="journey-nav__index">01</span>
+        <span class="journey-nav__label" data-i18n="journeyNav.intro">Intro</span>
+      </button>
+      <button class="journey-nav__link" type="button" data-target="solution-section"
+        data-i18n-aria="journeyNav.ariaVision" aria-label="Go to solution description section">
+        <span class="journey-nav__index">02</span>
+        <span class="journey-nav__label" data-i18n="journeyNav.vision">Vision</span>
+      </button>
+      <button class="journey-nav__link" type="button" data-target="slider-section"
+        data-i18n-aria="journeyNav.ariaPillars" aria-label="Go to pillars section">
+        <span class="journey-nav__index">03</span>
+        <span class="journey-nav__label" data-i18n="journeyNav.pillars">Pillars</span>
+      </button>
+      <button class="journey-nav__link" type="button" data-target="features-section"
+        data-i18n-aria="journeyNav.ariaFeatures" aria-label="Go to features section">
+        <span class="journey-nav__index">04</span>
+        <span class="journey-nav__label" data-i18n="journeyNav.features">Features</span>
+      </button>
+      <button class="journey-nav__link" type="button" data-target="world-section" data-i18n-aria="journeyNav.ariaAtlas"
+        aria-label="Go to atlas section">
+        <span class="journey-nav__index">05</span>
+        <span class="journey-nav__label" data-i18n="journeyNav.atlas">Atlas</span>
+      </button>
+    </nav>
 
-      <main id="landing-page">
-        <section id="hero-section" class="landing-section landing-section--hero">
-          <div class="section-bg" id="hero-bg" aria-hidden="true"></div>
-          <!-- Hero: full-screen Nahida showcase -->
-          <section id="hero-detail" class="hero-detail"></section>
-        </section>
+    <main id="landing-page">
+      <section id="hero-section" class="landing-section landing-section--hero landing-section--intro-video">
+        <!-- Intro video — fullscreen background -->
+        <video id="intro-video" class="intro-video__video" src="assets/media/videos/4.mp4" autoplay muted playsinline
+          loop preload="auto" aria-label="AETERNA intro cinematic"></video>
 
-        <section class="journey-bridge journey-bridge--dark" data-i18n-aria="bridge01.aria" aria-label="Introduction to pillars transition">
-          <div class="journey-bridge__content">
-            <span class="journey-bridge__chapter">01 → 02</span>
-            <p class="journey-bridge__eyebrow" data-i18n="bridge01.eyebrow">from manifesto to experience</p>
-            <p class="journey-bridge__text" data-i18n="bridge01.text">The platform resolves into five playable pillars that define how AETERNA is learned, felt and lived.</p>
+        <!-- Gradient veil -->
+        <div class="intro-video__veil" aria-hidden="true"></div>
+        <!-- Film grain -->
+        <div class="intro-video__grain" aria-hidden="true"></div>
+
+        <!-- Centred overlay content -->
+        <div class="intro-video__content">
+          <p class="intro-video__eyebrow" data-i18n="heroIntro.eyebrow">A living world from Southeast Asia</p>
+          <h1 class="intro-video__title" data-i18n="heroIntro.title">AETERNA</h1>
+          <p class="intro-video__tagline" data-i18n="heroIntro.tagline">Myth · Memory · Heritage</p>
+          <button class="intro-video__cta" type="button" data-target="slider-section" aria-label="Explore the world">
+            <span data-i18n="heroIntro.cta">Explore the World</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="intro-video__scroll-cue" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Solution Description / What is AETERNA?
+           ============================================================ -->
+      <section id="solution-section" class="landing-section solution-section">
+        <!-- Background gradient -->
+        <div class="solution-section__bg" aria-hidden="true"></div>
+
+        <div class="solution-section__inner">
+
+          <!-- ── Header ── -->
+          <div class="solution-section__header">
+            <span class="solution-section__kicker" data-i18n="solution.kicker">Solution Description</span>
+            <h2 class="solution-section__heading" data-i18n-html="solution.heading">What is <em>AETERNA?</em></h2>
           </div>
-        </section>
 
-        <section id="slider-section" class="landing-section landing-section--slider">
-          <div class="section-bg" id="slider-bg" aria-hidden="true"></div>
-          <!-- Character preview + slider -->
-          <section id="hero"></section>
-
-          <!-- Bottom character slider -->
-          <section id="character-slider"></section>
-        </section>
-
-        <section class="journey-bridge journey-bridge--dark" data-i18n-aria="bridge02.aria" aria-label="Pillars to living heritage transition">
-          <div class="journey-bridge__content">
-            <span class="journey-bridge__chapter">02 → 03</span>
-            <p class="journey-bridge__eyebrow" data-i18n="bridge02.eyebrow">from pillars to world</p>
-            <p class="journey-bridge__text" data-i18n="bridge02.text">What begins as system design becomes a living heritage world that players can move through, influence and remember.</p>
+          <!-- ── Description card ── -->
+          <div class="solution-card solution-card--desc">
+            <p class="solution-card__body" data-i18n-html="solution.bodyP1">
+              Aeterna is a <strong class="sol-hl sol-hl--gold">AAA Digital Heritage RPG Platform</strong> that utilizes
+              <strong class="sol-hl sol-hl--gold">Narrative AI</strong> to immortalize the soul of
+              <strong class="sol-hl sol-hl--gold">ASEAN</strong>. We transcend traditional gaming by merging <strong
+                class="sol-hl sol-hl--gold">Fair-play RPG mechanics</strong> with a <strong
+                class="sol-hl sol-hl--gold">Sustainable O2O Economy</strong>.
+            </p>
+            <p class="solution-card__core" data-i18n-html="solution.coreValue">
+              <span class="sol-hl sol-hl--teal">CORE VALUE:</span> Honoring
+              <strong class="sol-hl sol-hl--gold">heritage</strong> through
+              <strong class="sol-hl sol-hl--teal">human-centric technology</strong> to foster
+              <strong class="sol-hl sol-hl--gold">shared prosperity</strong> and
+              <strong class="sol-hl sol-hl--gold">purposeful entertainment.</strong>
+            </p>
           </div>
-        </section>
 
-        <section id="video-section" class="landing-section landing-section--video" data-video-start="0.5">
-          <div class="video-scroll">
-            <div class="video-scroll__sticky">
-              <video
-                class="video-scroll__video"
-                muted
-                playsinline
-                preload="none"
-                aria-label="Cinematic forest background"
-              >
-                <source src="assets/media/videos/bgvid-hq.mp4" type="video/mp4" />
-              </video>
+          <!-- ── Formula row ── -->
+          <div class="solution-formula">
+            <div class="solution-formula__block">
+              <span class="solution-formula__verb sol-hl--red" data-i18n="solution.formulaVerb1">USE</span>
+              <span class="solution-formula__noun sol-hl--gold" data-i18n="solution.formulaNoun1">Technology</span>
+            </div>
 
-              <div class="video-scroll__veil" aria-hidden="true"></div>
-              <div class="video-scroll__grain" aria-hidden="true"></div>
+            <div class="solution-formula__arrow">
+              <svg viewBox="0 0 40 12" fill="none" aria-hidden="true">
+                <path d="M0 6h36M30 1l6 5-6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <span class="solution-formula__sub" data-i18n="solution.formulaSub1">to</span>
+              <div class="solution-formula__sub-list">
+                <span data-i18n="solution.formulaSubList1">Online-to-Offline</span>
+                <span data-i18n="solution.formulaSubList2">Evolutionary Narrative AI</span>
+              </div>
+            </div>
 
-              <div class="video-scroll__content">
-                <p class="video-scroll__eyebrow" data-i18n="videoSection1.eyebrow">living heritage</p>
-                <h2 class="video-scroll__title" data-i18n="videoSection1.title">Not a museum. A world in motion.</h2>
-                <p class="video-scroll__copy" data-i18n="videoSection1.copy">AETERNA turns history, landmarks and cultural memory into an explorable RPG world where heritage lives, breathes and responds to the player.</p>
+            <div class="solution-formula__block">
+              <span class="solution-formula__verb sol-hl--red" data-i18n="solution.formulaVerb2">SAVE</span>
+              <span class="solution-formula__noun sol-hl--gold" data-i18n="solution.formulaNoun2">Heritage</span>
+            </div>
+
+            <div class="solution-formula__arrow">
+              <svg viewBox="0 0 40 12" fill="none" aria-hidden="true">
+                <path d="M0 6h36M30 1l6 5-6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <span class="solution-formula__sub" data-i18n="solution.formulaSub2">by</span>
+            </div>
+
+            <div class="solution-formula__block">
+              <span class="solution-formula__verb sol-hl--red" data-i18n="solution.formulaVerb3">TRANSFORM</span>
+              <div class="solution-formula__stack">
+                <span class="solution-formula__noun sol-hl--gold" data-i18n="solution.formulaNoun3">Digital
+                  Assets</span>
+                <span class="solution-formula__noun--sm" data-i18n="solution.formulaNounSm">Heritage Metaverse</span>
               </div>
             </div>
           </div>
-        </section>
 
-        <section class="journey-bridge journey-bridge--toward-light" data-i18n-aria="bridge03.aria" aria-label="Living heritage to atlas transition">
-          <div class="journey-bridge__content">
-            <span class="journey-bridge__chapter">03 → 04</span>
-            <p class="journey-bridge__eyebrow" data-i18n="bridge03.eyebrow">a living world needs a map</p>
-            <p class="journey-bridge__text" data-i18n="bridge03.text">Routes, festivals and memory converge into one playable ASEAN atlas that gives the world shape and direction.</p>
-          </div>
-        </section>
+          <!-- ── Vision + Mission grid ── -->
+          <div class="solution-vm">
+            <!-- Vision -->
+            <div class="solution-vm__card solution-vm__card--vision">
+              <p class="solution-vm__label" data-i18n="solution.visionLabel">Vision</p>
+              <p class="solution-vm__text" data-i18n-html="solution.visionText">
+                Becoming the world's leading
+                <strong class="sol-hl sol-hl--gold">digital heritage ecosystem</strong>,
+                where all of humanity's cultural values are immortalized and brilliantly
+                reborn in the <strong class="sol-hl sol-hl--teal">Metaverse</strong> era.
+              </p>
+            </div>
 
-        <section id="world-section" class="landing-section landing-section--world">
-
-          <!-- Atmospheric depth layers -->
-          <div class="world-atm" aria-hidden="true"></div>
-
-          <!-- Top info bar -->
-          <div class="world-topbar" aria-hidden="true">
-            <span data-i18n="world.topbarAtlas">ASEAN HERITAGE ATLAS</span>
-            <div class="world-topbar__rule"></div>
-            <span data-i18n="world.topbarNations">11 NATIONS &middot; ONE LIVING WORLD</span>
-            <div class="world-topbar__rule world-topbar__rule--grow"></div>
-            <span data-i18n="world.topbarRoutes">CULTURAL ROUTES &middot; FESTIVAL PATHS</span>
-          </div>
-
-          <!-- Radar / territory map (decorative) -->
-          <div class="world-radar" aria-hidden="true">
-            <div class="world-radar__ring world-radar__ring--a"></div>
-            <div class="world-radar__ring world-radar__ring--b"></div>
-            <div class="world-radar__ring world-radar__ring--c"></div>
-            <div class="world-radar__ring world-radar__ring--d"></div>
-            <div class="world-radar__axis world-radar__axis--h"></div>
-            <div class="world-radar__axis world-radar__axis--v"></div>
-            <div class="world-radar__route world-radar__route--a"></div>
-            <div class="world-radar__route world-radar__route--b"></div>
-            <div class="world-radar__route world-radar__route--c"></div>
-            <div class="world-radar__sweep"></div>
-            <div class="world-radar__glow"></div>
-            <div class="world-radar__center"></div>
-            <div class="world-radar__pin" style="--px:44%;--py:36%;" data-label="Angkor"></div>
-            <div class="world-radar__pin" style="--px:27%;--py:60%;" data-label="Hoi An"></div>
-            <div class="world-radar__pin" style="--px:65%;--py:53%;" data-label="Borobudur"></div>
-            <div class="world-radar__pin" style="--px:55%;--py:20%;" data-label="Luang Prabang"></div>
+            <!-- Mission -->
+            <div class="solution-vm__card solution-vm__card--mission">
+              <p class="solution-vm__label" data-i18n="solution.missionLabel">Mission</p>
+              <ul class="solution-mission">
+                <li data-i18n-html="solution.mission1">
+                  <strong class="sol-hl sol-hl--gold">Rejuvenating Heritage:</strong>
+                  Utilizing artificial intelligence to bridge the generational gap, transforming
+                  dry historical documents into captivating interactive experiences for young people.
+                </li>
+                <li data-i18n-html="solution.mission2">
+                  <strong class="sol-hl sol-hl--gold">Immortalizing Values:</strong>
+                  Digitizing and preserving the soul of ASEAN culture in the digital space,
+                  ensuring it never fades away over time.
+                </li>
+                <li data-i18n-html="solution.mission3">
+                  <strong class="sol-hl sol-hl--gold">Promoting Sustainable Economy:</strong>
+                  Creating a Hybrid (O2O) economic model that converts online users into real
+                  tourists, directly supporting local communities and heritage sites.
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Main copy -->
-          <div class="world-copy">
-            <p class="world-copy__kicker" data-i18n="world.kicker">ASEAN Heritage Atlas</p>
-            <h2 class="world-copy__title">
-              <span data-i18n="world.titleLine1">Across 11</span>
-              <span data-i18n="world.titleLine2">Nations</span>
+        </div>
+      </section>
+
+      <section class="journey-bridge journey-bridge--dark" data-i18n-aria="bridge01.aria"
+        aria-label="Introduction to pillars transition">
+        <div class="journey-bridge__content">
+          <span class="journey-bridge__chapter">02 → 03</span>
+          <p class="journey-bridge__eyebrow" data-i18n="bridge01.eyebrow">from manifesto to experience</p>
+          <p class="journey-bridge__text" data-i18n="bridge01.text">The platform resolves into five playable pillars
+            that define how AETERNA is learned, felt and lived.</p>
+        </div>
+      </section>
+
+      <!-- slider-section: CountryStorySlider mounts here -->
+      <section id="slider-section" class="landing-section landing-section--slider" tabindex="0"
+        data-i18n-aria="sliderSection.aria" aria-label="ASEAN Chronicles — 11 Nations"></section>
+
+      <section class="journey-bridge journey-bridge--dark" data-i18n-aria="bridge02.aria"
+        aria-label="Pillars to features transition">
+        <div class="journey-bridge__content">
+          <span class="journey-bridge__chapter">03 → 04</span>
+          <p class="journey-bridge__eyebrow">from pillars to features</p>
+          <p class="journey-bridge__text">Discover seven powerful systems that define how AETERNA preserves, plays and
+            connects heritage across Southeast Asia.</p>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           Features Section — 7 Core Features
+           ============================================================ -->
+      <section id="features-section" class="landing-section features-section">
+        <div class="features-section__bg" aria-hidden="true"></div>
+        <div class="features-section__grain" aria-hidden="true"></div>
+        <div class="features-section__inner">
+          <div class="features-section__header">
+            <span class="features-section__kicker" data-i18n="featuresSection.kicker">Core Features</span>
+            <h2 class="features-section__heading" data-i18n-html="featuresSection.heading">Seven Pillars of
+              <em>AETERNA</em>
             </h2>
-            <p class="world-copy__body" data-i18n="world.body">From sacred cities to maritime trade routes, AETERNA reframes Southeast Asia as one connected playable atlas where geography, festival calendars and cultural memory become part of the journey.</p>
-            <div class="world-copy__chips">
-              <span class="world-copy__chip" data-i18n="world.chip1">cross-border routes</span>
-              <span class="world-copy__chip" data-i18n="world.chip2">festival timelines</span>
-              <span class="world-copy__chip" data-i18n="world.chip3">digital twins</span>
+            <p class="features-section__subheading" data-i18n="featuresSection.subheading">Each feature is a gateway
+              into a living heritage world — designed to preserve, connect and inspire.</p>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card" id="feature-card-1">
+              <div class="feature-card__video-wrap">
+                <video class="feature-card__video" muted playsinline loop preload="none">
+                  <source src="assets/media/videos/fea1.mp4" type="video/mp4" />
+                </video>
+                <div class="feature-card__video-veil" aria-hidden="true"></div>
+                <div class="feature-card__play-indicator">Playing</div>
+              </div>
+              <div class="feature-card__content">
+                <span class="feature-card__number">01</span>
+                <div class="feature-card__line"></div>
+                <h3 class="feature-card__title" data-i18n-html="featuresSection.f1Title">Personalized <span
+                    class="feature-card__title-highlight">Heritage Quests</span></h3>
+                <p class="feature-card__description" data-i18n="featuresSection.f1Desc">Aeterna begins with a journey of
+                  personal liberation, where players embody a time-traveling adventure, venturing into heritage lands
+                  recreated with precise 3D technology. The quest system is personalized based on behavior, allowing
+                  players to deeply interact with local cultural and historical values, drawing inspiration from folk
+                  values such as Muay Boran in Thailand, Sumpit &amp; Wau in Malaysia, and more.</p>
+              </div>
+            </article>
+            <article class="feature-card" id="feature-card-2">
+              <div class="feature-card__video-wrap">
+                <video class="feature-card__video" muted playsinline loop preload="none">
+                  <source src="assets/media/videos/fea2.mp4" type="video/mp4" />
+                </video>
+                <div class="feature-card__video-veil" aria-hidden="true"></div>
+                <div class="feature-card__play-indicator">Playing</div>
+              </div>
+              <div class="feature-card__content">
+                <span class="feature-card__number">02</span>
+                <div class="feature-card__line"></div>
+                <h3 class="feature-card__title" data-i18n-html="featuresSection.f2Title">Historical <span
+                    class="feature-card__title-highlight">Personification</span></h3>
+                <p class="feature-card__description" data-i18n="featuresSection.f2Desc">The core of the game is its
+                  "Historical Personification" mechanism. Through the Gacha system, players acquire characters based on
+                  heroes and historical figures from 11 ASEAN countries. Gacha is exclusively for Ancient Costumes and
+                  Mythical Pets. Each character is a complete digital work of art with distinctive design, from ancient
+                  costumes and mythical creatures to skill sets inspired by historical anecdotes and a voice-over system
+                  with strong local flavor.</p>
+              </div>
+            </article>
+            <article class="feature-card" id="feature-card-3">
+              <div class="feature-card__video-wrap">
+                <video class="feature-card__video" muted playsinline loop preload="none">
+                  <source src="assets/media/videos/fea3.mp4" type="video/mp4" />
+                </video>
+                <div class="feature-card__video-veil" aria-hidden="true"></div>
+                <div class="feature-card__play-indicator">Playing</div>
+              </div>
+              <div class="feature-card__content">
+                <span class="feature-card__number">03</span>
+                <div class="feature-card__line"></div>
+                <h3 class="feature-card__title" data-i18n-html="featuresSection.f3Title">Cultural <span
+                    class="feature-card__title-highlight">Accumulation Points</span></h3>
+                <p class="feature-card__description" data-i18n="featuresSection.f3Desc">To avoid pure luck, Aeterna
+                  integrates "Cultural Accumulation Points." Each unsuccessful Gacha attempt is converted into valuable
+                  knowledge resources or items, ensuring players always receive commensurate knowledgeable and spiritual
+                  value.</p>
+              </div>
+            </article>
+            <article class="feature-card" id="feature-card-4">
+              <div class="feature-card__video-wrap">
+                <video class="feature-card__video" muted playsinline loop preload="none">
+                  <source src="assets/media/videos/fea4.mp4" type="video/mp4" />
+                </video>
+                <div class="feature-card__video-veil" aria-hidden="true"></div>
+                <div class="feature-card__play-indicator">Playing</div>
+              </div>
+              <div class="feature-card__content">
+                <span class="feature-card__number">04</span>
+                <div class="feature-card__line"></div>
+                <h3 class="feature-card__title" data-i18n-html="featuresSection.f4Title">Player-Driven <span
+                    class="feature-card__title-highlight">Economy</span></h3>
+                <p class="feature-card__description" data-i18n="featuresSection.f4Desc">Aeterna establishes a
+                  player-driven economy where rare items, skins, and characters become digital assets that can be traded
+                  and deposited. This blurs the lines between the virtual world and real value, transforming players'
+                  experience into tangible economic value and fostering a vibrant and lasting community.</p>
+              </div>
+            </article>
+            <article class="feature-card" id="feature-card-5">
+              <div class="feature-card__video-wrap">
+                <video class="feature-card__video" muted playsinline loop preload="none">
+                  <source src="assets/media/videos/fea5.mp4" type="video/mp4" />
+                </video>
+                <div class="feature-card__video-veil" aria-hidden="true"></div>
+                <div class="feature-card__play-indicator">Playing</div>
+              </div>
+              <div class="feature-card__content">
+                <span class="feature-card__number">05</span>
+                <div class="feature-card__line"></div>
+                <h3 class="feature-card__title" data-i18n-html="featuresSection.f5Title">Team-Based <span
+                    class="feature-card__title-highlight">Raids &amp; Eco Missions</span></h3>
+                <p class="feature-card__description" data-i18n="featuresSection.f5Desc">The game emphasizes synergy
+                  through team-based raids. Players conquer challenges together and participate in missions with
+                  contemporary messages, such as eliminating "Pollution Monsters" and restoring green ecosystems.</p>
+              </div>
+            </article>
+            <article class="feature-card" id="feature-card-6">
+              <div class="feature-card__video-wrap">
+                <video class="feature-card__video" muted playsinline loop preload="none">
+                  <source src="assets/media/videos/fea6.mp4" type="video/mp4" />
+                </video>
+                <div class="feature-card__video-veil" aria-hidden="true"></div>
+                <div class="feature-card__play-indicator">Playing</div>
+              </div>
+              <div class="feature-card__content">
+                <span class="feature-card__number">06</span>
+                <div class="feature-card__line"></div>
+                <h3 class="feature-card__title" data-i18n-html="featuresSection.f6Title">Personal Exhibition &amp; <span
+                    class="feature-card__title-highlight">Community Events</span></h3>
+                <p class="feature-card__description" data-i18n="featuresSection.f6Desc">The personal exhibition and
+                  community event features allow gamers to assert their individuality, transforming their heritage
+                  collections into a source of pride and a tool for connecting cultures across nations.</p>
+              </div>
+            </article>
+            <article class="feature-card" id="feature-card-7">
+              <div class="feature-card__video-wrap">
+                <video class="feature-card__video" muted playsinline loop preload="none">
+                  <source src="assets/media/videos/fea7.mp4" type="video/mp4" />
+                </video>
+                <div class="feature-card__video-veil" aria-hidden="true"></div>
+                <div class="feature-card__play-indicator">Playing</div>
+              </div>
+              <div class="feature-card__content">
+                <span class="feature-card__number">07</span>
+                <div class="feature-card__line"></div>
+                <h3 class="feature-card__title" data-i18n-html="featuresSection.f7Title">Hybrid Reward — <span
+                    class="feature-card__title-highlight">Virtual to Real</span></h3>
+                <p class="feature-card__description" data-i18n="featuresSection.f7Desc">Aeterna directly connects
+                  tourism and real-world consumption through its Hybrid Reward model. Owning rare in-game heritage
+                  collections unlocks real-life privileges such as service vouchers, attraction tickets, or tangible
+                  cultural artifacts. A complete value loop: Virtual Inspiration – Real Experience – Sustainable Value.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey-bridge journey-bridge--toward-light" data-i18n-aria="bridge03.aria"
+        aria-label="Features to atlas transition">
+        <div class="journey-bridge__content">
+          <span class="journey-bridge__chapter">04 → 05</span>
+          <p class="journey-bridge__eyebrow" data-i18n="bridge03.eyebrow">a living world needs a map</p>
+          <p class="journey-bridge__text" data-i18n="bridge03.text">Routes, festivals and memory converge into one
+            playable ASEAN atlas that gives the world shape and direction.</p>
+        </div>
+      </section>
+
+      <section id="world-section" class="landing-section landing-section--world">
+
+        <!-- Atmospheric depth layers -->
+        <div class="world-atm" aria-hidden="true"></div>
+
+        <!-- Top info bar -->
+        <div class="world-topbar" aria-hidden="true">
+          <span data-i18n="world.topbarAtlas">ASEAN HERITAGE ATLAS</span>
+          <div class="world-topbar__rule"></div>
+          <span data-i18n="world.topbarNations">11 NATIONS &middot; ONE LIVING WORLD</span>
+          <div class="world-topbar__rule world-topbar__rule--grow"></div>
+          <span data-i18n="world.topbarRoutes">CULTURAL ROUTES &middot; FESTIVAL PATHS</span>
+        </div>
+
+        <!-- Radar / territory map (decorative) -->
+        <div class="world-radar" aria-hidden="true">
+        </div>
+
+        <!-- Main copy -->
+        <div class="world-copy">
+          <p class="world-copy__kicker" data-i18n="world.kicker">ASEAN Heritage Atlas</p>
+          <h2 class="world-copy__title">
+            <span data-i18n="world.titleLine1">Across 11</span>
+            <span data-i18n="world.titleLine2">Nations</span>
+          </h2>
+          <p class="world-copy__body" data-i18n="world.body">From sacred cities to maritime trade routes, AETERNA
+            reframes Southeast Asia as one connected playable atlas where geography, festival calendars and cultural
+            memory become part of the journey.</p>
+          <div class="world-copy__chips">
+            <span class="world-copy__chip" data-i18n="world.chip1">cross-border routes</span>
+            <span class="world-copy__chip" data-i18n="world.chip2">festival timelines</span>
+            <span class="world-copy__chip" data-i18n="world.chip3">digital twins</span>
+          </div>
+        </div>
+
+        <!-- Bottom location strip -->
+        <div class="world-locs" role="list">
+          <div class="world-loc" role="listitem">
+            <em class="world-loc__num">01</em>
+            <div class="world-loc__bar"></div>
+            <div class="world-loc__text">
+              <strong class="world-loc__name" data-i18n="world.loc1Name">Mainland Route</strong>
+              <p class="world-loc__desc" data-i18n="world.loc1Desc">Vietnam, Laos, Cambodia, Thailand and Myanmar woven
+                into one explorable cultural corridor</p>
             </div>
           </div>
+          <div class="world-loc" role="listitem">
+            <em class="world-loc__num">02</em>
+            <div class="world-loc__bar"></div>
+            <div class="world-loc__text">
+              <strong class="world-loc__name" data-i18n="world.loc2Name">Maritime Arc</strong>
+              <p class="world-loc__desc" data-i18n="world.loc2Desc">Indonesia, Malaysia, Singapore, Brunei and the
+                Philippines linked by island histories</p>
+            </div>
+          </div>
+          <div class="world-loc" role="listitem">
+            <em class="world-loc__num">03</em>
+            <div class="world-loc__bar"></div>
+            <div class="world-loc__text">
+              <strong class="world-loc__name" data-i18n="world.loc3Name">Festival Circuit</strong>
+              <p class="world-loc__desc" data-i18n="world.loc3Desc">Seasonal events like Loy Krathong, Chol Chnam Thmay
+                and Lunar New Year activate the world in real time</p>
+            </div>
+          </div>
+        </div>
 
-          <!-- Bottom location strip -->
-          <div class="world-locs" role="list">
-            <div class="world-loc" role="listitem">
-              <em class="world-loc__num">01</em>
-              <div class="world-loc__bar"></div>
-              <div class="world-loc__text">
-                <strong class="world-loc__name" data-i18n="world.loc1Name">Mainland Route</strong>
-                <p class="world-loc__desc" data-i18n="world.loc1Desc">Vietnam, Laos, Cambodia, Thailand and Myanmar woven into one explorable cultural corridor</p>
+      </section>
+
+
+      <footer id="site-footer" class="site-footer" aria-label="AETERNA finale">
+
+        <!-- ── Stage: wordmark + download + CTA ── -->
+        <div class="site-footer__stage">
+          <p class="site-footer__kicker" data-i18n="footer.kicker">End of introduction &mdash; the world stays open</p>
+          <h2 class="site-footer__wordmark">AETERNA</h2>
+          <p class="site-footer__tagline" data-i18n="footer.tagline">A living world built from myth, memory and the real
+            routes of Southeast Asia.</p>
+          <div class="site-footer__download">
+            <p class="site-footer__download-label">Coming Soon</p>
+            <div class="site-footer__download-row">
+              <button class="site-footer__dl-btn site-footer__dl-btn--soon" type="button" disabled aria-disabled="true"
+                aria-label="App Store — Coming Soon">
+                <svg class="site-footer__dl-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.18 1.27-2.16 3.8.03 3.02 2.65 4.03 2.68 4.04l-.07.28zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                </svg>
+                <span class="site-footer__dl-text">
+                  <span class="site-footer__dl-sub">Coming soon on</span>
+                  <span class="site-footer__dl-name">App Store</span>
+                </span>
+                <span class="site-footer__soon-badge">Soon</span>
+              </button>
+              <button class="site-footer__dl-btn site-footer__dl-btn--soon" type="button" disabled aria-disabled="true"
+                aria-label="Google Play — Coming Soon">
+                <svg class="site-footer__dl-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M3.18 23.76c.3.17.64.22.99.14l12.12-6.98-2.64-2.64-10.47 9.48zm-1.84-21.1C1.12 3.03 1 3.5 1 4.04v15.92c0 .54.12 1.01.34 1.38l.08.07 8.93-8.93v-.21L1.42 2.59l-.08.07zm15.92 10.6L14.1 10.1l-3.14 3.14 3.16 3.16 3.15-1.82c.9-.52.9-1.8-.01-2.32zm-14.09 9.66l.07-.07L12.96 14 10.82 11.86 3.17 22.92z" />
+                </svg>
+                <span class="site-footer__dl-text">
+                  <span class="site-footer__dl-sub">Coming soon on</span>
+                  <span class="site-footer__dl-name">Google Play</span>
+                </span>
+                <span class="site-footer__soon-badge">Soon</span>
+              </button>
+            </div>
+          </div>
+          <div class="site-footer__cta">
+            <button class="site-footer__btn site-footer__btn--soon" type="button" disabled aria-disabled="true">Coming
+              Soon</button>
+            <button class="site-footer__btn site-footer__btn--lit site-footer__btn--soon" type="button" disabled
+              aria-disabled="true">Coming Soon</button>
+          </div>
+        </div>
+
+        <!-- ── Developer / Publisher info zone ── -->
+        <div class="site-footer__dev-zone">
+
+          <!-- Left: Brand + Contact -->
+          <div class="site-footer__dev-brand">
+            <div class="site-footer__dev-logo" aria-label="AETERNA logo">
+              <img src="assets/media/images/backgrounds/logo.svg" alt="AETERNA" width="40" height="40" />
+              <span class="site-footer__dev-name">AETERNA</span>
+            </div>
+            <p class="site-footer__dev-desc">
+              Developed &amp; Published by <strong>AETERNA Interactive Studio</strong><br />
+              A Gacha RPG honoring Southeast Asian cultural heritage.
+            </p>
+            <address class="site-footer__dev-contact">
+              <a href="mailto:contact@aeterna-game.com" class="site-footer__dev-link" aria-label="Email us">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m2 7 10 7 10-7" />
+                </svg>
+                contact@aeterna-game.com
+              </a>
+              <a href="tel:+84347347538" class="site-footer__dev-link" aria-label="Call us">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 18z" />
+                </svg>
+                0347 347 538
+              </a>
+              <a href="https://aeterna-game.com" class="site-footer__dev-link" target="_blank" rel="noopener"
+                aria-label="Official website">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+                aeterna-game.com
+              </a>
+            </address>
+          </div>
+
+          <!-- Centre: Age Rating -->
+          <div class="site-footer__rating-block" aria-label="Age rating information">
+            <div class="site-footer__rating-badges">
+              <!-- PEGI 12 badge -->
+              <div class="site-footer__rating-badge site-footer__rating-badge--pegi" aria-label="PEGI 12 rated">
+                <span class="site-footer__rating-num">12</span>
+                <span class="site-footer__rating-org">PEGI</span>
+              </div>
+              <!-- ESRB T badge -->
+              <div class="site-footer__rating-badge site-footer__rating-badge--esrb" aria-label="ESRB Teen rated">
+                <span class="site-footer__rating-num">T</span>
+                <span class="site-footer__rating-org">ESRB</span>
               </div>
             </div>
-            <div class="world-loc" role="listitem">
-              <em class="world-loc__num">02</em>
-              <div class="world-loc__bar"></div>
-              <div class="world-loc__text">
-                <strong class="world-loc__name" data-i18n="world.loc2Name">Maritime Arc</strong>
-                <p class="world-loc__desc" data-i18n="world.loc2Desc">Indonesia, Malaysia, Singapore, Brunei and the Philippines linked by island histories</p>
-              </div>
-            </div>
-            <div class="world-loc" role="listitem">
-              <em class="world-loc__num">03</em>
-              <div class="world-loc__bar"></div>
-              <div class="world-loc__text">
-                <strong class="world-loc__name" data-i18n="world.loc3Name">Festival Circuit</strong>
-                <p class="world-loc__desc" data-i18n="world.loc3Desc">Seasonal events like Loy Krathong, Chol Chnam Thmay and Lunar New Year activate the world in real time</p>
-              </div>
-            </div>
+            <p class="site-footer__rating-desc">
+              Fantasy violence &middot; Mild language<br />
+              Not suitable for children under 12
+            </p>
+            <p class="site-footer__rating-note">
+              Rating applies to base game. Online interactions not rated by ESRB/PEGI.
+            </p>
           </div>
 
-        </section>
-
-        <section class="journey-bridge journey-bridge--toward-dark" data-i18n-aria="bridge04.aria" aria-label="Atlas to impact transition">
-          <div class="journey-bridge__content">
-            <span class="journey-bridge__chapter">04 → 05</span>
-            <p class="journey-bridge__eyebrow" data-i18n="bridge04.eyebrow">from play to reality</p>
-            <p class="journey-bridge__text" data-i18n="bridge04.text">The journey does not end on screen. It returns value to tourism, local artisans and cultural preservation in the real world.</p>
-          </div>
-        </section>
-
-        <section id="video-section-2" class="landing-section landing-section--video" data-video-start="0.5">
-          <div class="video-scroll video-scroll--alternate">
-            <div class="video-scroll__sticky">
-              <video
-                class="video-scroll__video"
-                muted
-                playsinline
-                preload="none"
-                aria-label="Cinematic canopy background"
-              >
-                <source src="assets/media/videos/bgvid2-hq.mp4" type="video/mp4" />
-              </video>
-
-              <div class="video-scroll__veil" aria-hidden="true"></div>
-              <div class="video-scroll__grain" aria-hidden="true"></div>
-
-              <div class="video-scroll__content">
-                <p class="video-scroll__eyebrow" data-i18n="videoSection2.eyebrow">real-world impact</p>
-                <h2 class="video-scroll__title" data-i18n="videoSection2.title">Virtual play, tangible value.</h2>
-                <p class="video-scroll__copy" data-i18n="videoSection2.copy">AETERNA turns in-game discovery into tourism traffic, artisan support, cultural preservation data and O2O experiences that matter beyond the screen.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer id="site-footer" class="site-footer" data-i18n-aria="footer.ariaFooter" aria-label="AETERNA finale">
-
-          <div class="site-footer__stage">
-            <p class="site-footer__kicker" data-i18n="footer.kicker">End of introduction &mdash; the world stays open</p>
-            <h2 class="site-footer__wordmark">AETERNA</h2>
-            <p class="site-footer__tagline" data-i18n="footer.tagline">A living world built from myth, memory and the real routes of Southeast Asia.</p>
-              <div class="site-footer__download">
-                <p class="site-footer__download-label">Coming Soon</p>
-                <div class="site-footer__download-row">
-                  <button class="site-footer__dl-btn site-footer__dl-btn--soon" type="button" disabled aria-disabled="true" aria-label="App Store — Coming Soon">
-                    <svg class="site-footer__dl-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.14-2.18 1.27-2.16 3.8.03 3.02 2.65 4.03 2.68 4.04l-.07.28zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    <span class="site-footer__dl-text">
-                      <span class="site-footer__dl-sub">Coming soon on</span>
-                      <span class="site-footer__dl-name">App Store</span>
-                    </span>
-                    <span class="site-footer__soon-badge">Soon</span>
-                  </button>
-                  <button class="site-footer__dl-btn site-footer__dl-btn--soon" type="button" disabled aria-disabled="true" aria-label="Google Play — Coming Soon">
-                    <svg class="site-footer__dl-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.18 23.76c.3.17.64.22.99.14l12.12-6.98-2.64-2.64-10.47 9.48zm-1.84-21.1C1.12 3.03 1 3.5 1 4.04v15.92c0 .54.12 1.01.34 1.38l.08.07 8.93-8.93v-.21L1.42 2.59l-.08.07zm15.92 10.6L14.1 10.1l-3.14 3.14 3.16 3.16 3.15-1.82c.9-.52.9-1.8-.01-2.32zm-14.09 9.66l.07-.07L12.96 14 10.82 11.86 3.17 22.92z"/></svg>
-                    <span class="site-footer__dl-text">
-                      <span class="site-footer__dl-sub">Coming soon on</span>
-                      <span class="site-footer__dl-name">Google Play</span>
-                    </span>
-                    <span class="site-footer__soon-badge">Soon</span>
-                  </button>
-                </div>
-              </div>
-            <div class="site-footer__cta">
-              <button class="site-footer__btn site-footer__btn--soon" type="button" disabled aria-disabled="true">Coming Soon</button>
-              <button class="site-footer__btn site-footer__btn--lit site-footer__btn--soon" type="button" disabled aria-disabled="true">Coming Soon</button>
+          <!-- Right: Social links -->
+          <div class="site-footer__socials">
+            <p class="site-footer__socials-label">Follow the journey</p>
+            <div class="site-footer__socials-row">
+              <a href="https://www.facebook.com/aeternagame.site" class="site-footer__social-btn" aria-label="Facebook"
+                target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </a>
+              <a href="#" class="site-footer__social-btn is-disabled" aria-label="Twitter / X" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a href="#" class="site-footer__social-btn is-disabled" aria-label="YouTube" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                  <polygon fill="#060d0a" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+                </svg>
+              </a>
+              <a href="#" class="site-footer__social-btn is-disabled" aria-label="Discord" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                </svg>
+              </a>
+              <a href="https://www.tiktok.com/@aeternagame.site" class="site-footer__social-btn" aria-label="TikTok"
+                target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z" />
+                </svg>
+              </a>
             </div>
           </div>
 
-          <div class="site-footer__base">
-            <span class="site-footer__brand">AETERNA</span>
-            <nav class="site-footer__nav" data-i18n-aria="footer.ariaFooterNav" aria-label="Footer navigation">
-              <button type="button" class="site-footer__nav-btn" data-scroll-target="slider-section" data-i18n="footer.navPillars">Pillars</button>
-              <button type="button" class="site-footer__nav-btn" data-scroll-target="video-section" data-i18n="footer.navHeritage">Heritage</button>
-              <button type="button" class="site-footer__nav-btn" data-scroll-target="video-section-2" data-i18n="footer.navImpact">Impact</button>
-              <button type="button" class="site-footer__nav-btn" data-scroll-target="world-section" data-i18n="footer.navAtlas">Atlas</button>
-            </nav>
-            <button class="site-footer__top" type="button" data-scroll-target="hero-section" data-i18n="footer.scrollTop">&#8593; Top</button>
+        </div>
+
+        <!-- ── Legal base strip ── -->
+        <div class="site-footer__base">
+          <span class="site-footer__brand">AETERNA</span>
+
+          <nav class="site-footer__nav" aria-label="Footer section navigation">
+            <button type="button" class="site-footer__nav-btn" data-scroll-target="solution-section"
+              data-i18n="heroLanding.visionTitle">Vision</button>
+            <button type="button" class="site-footer__nav-btn" data-scroll-target="slider-section"
+              data-i18n="footer.navPillars">Pillars</button>
+            <button type="button" class="site-footer__nav-btn" data-scroll-target="features-section"
+              data-i18n="footer.navFeatures">Features</button>
+            <button type="button" class="site-footer__nav-btn" data-scroll-target="world-section"
+              data-i18n="footer.navAtlas">Atlas</button>
+          </nav>
+
+          <div class="site-footer__legal">
+            <a href="#" class="site-footer__legal-link" id="footer-privacy-link">Privacy Policy</a>
+            <span class="site-footer__legal-sep" aria-hidden="true">&middot;</span>
+            <a href="#" class="site-footer__legal-link" id="footer-terms-link">Terms of Service</a>
+            <span class="site-footer__legal-sep" aria-hidden="true">&middot;</span>
+            <a href="#" class="site-footer__legal-link" id="footer-cookie-link">Cookie Policy</a>
+            <span class="site-footer__legal-sep" aria-hidden="true">&middot;</span>
+            <span class="site-footer__copyright">&copy; 2025 AETERNA Interactive Studio. All rights reserved.</span>
           </div>
+        </div>
 
-        </footer>
-      </main>
-    </div>
+      </footer>
+    </main>
+  </div>
 
-    <script type="module" src="assets/js/app.js"></script>
-  </body>
+  <!-- Fixed scroll-to-top button -->
+  <button id="scroll-top-fab" class="scroll-top-fab" type="button" aria-label="Scroll to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+
 </html>

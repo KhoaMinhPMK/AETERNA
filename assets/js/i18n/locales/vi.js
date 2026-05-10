@@ -8,14 +8,13 @@ const vi = {
   nav: {
     logoSub: 'RPG Di Sản ASEAN',
     platform: 'Nền Tảng',
-    atlas: 'Bản Đồ',
-    impact: 'Tác Động',
-    manifesto: 'Tuyên Ngôn',
-    partner: 'Đối Tác',
-    journeyMap: 'Bản Đồ Hành Trình',
-    intro: 'Giới Thiệu',
     pillars: 'Trụ Cột',
-    living: 'Sống Động',
+    features: 'Tính năng',
+    atlas: 'Bản đồ',
+    manifesto: 'Tuyên ngôn',
+    partner: 'Đối tác',
+    journeyMap: 'Bản đồ Hành trình',
+    intro: 'Giới thiệu',
     openNav: 'Mở điều hướng',
     closeNav: 'Đóng điều hướng',
     goToIntro: 'Đến phần giới thiệu',
@@ -26,15 +25,15 @@ const vi = {
   },
   journeyNav: {
     ariaIntro: 'Đến phần giới thiệu',
+    ariaVision: 'Đến phần mô tả giải pháp',
     ariaPillars: 'Đến phần trụ cột',
-    ariaLiving: 'Đến phần di sản sống',
+    ariaFeatures: 'Đến phần tính năng',
     ariaAtlas: 'Đến phần bản đồ',
-    ariaImpact: 'Đến phần tác động',
-    intro: 'Giới Thiệu',
-    pillars: 'Trụ Cột',
-    living: 'Sống Động',
-    atlas: 'Bản Đồ',
-    impact: 'Tác Động',
+    intro: 'Giới thiệu',
+    vision: 'Nền tảng',
+    pillars: 'Trụ cột',
+    features: 'Tính năng',
+    atlas: 'Bản đồ',
   },
   hero: {
     kicker: 'Trụ cột trải nghiệm cốt lõi',
@@ -95,6 +94,35 @@ const vi = {
     loc3Name: 'Mạch Lễ Hội',
     loc3Desc: 'Các sự kiện theo mùa như Loy Krathong, Chol Chnam Thmay và Tết Nguyên Đán kích hoạt thế giới trong thời gian thực',
   },
+  solution: {
+    kicker: 'Mô Tả Giải Pháp',
+    heading: '<em>AETERNA</em> là gì?',
+    bodyP1: 'Aeterna là <strong class="sol-hl sol-hl--gold">nền tảng RPG Di sản Số AAA</strong> sử dụng <strong class="sol-hl sol-hl--gold">AI Tự sự</strong> để bất tử hóa linh hồn của <strong class="sol-hl sol-hl--gold">ASEAN</strong>. Chúng tôi vượt ra ngoài giới hạn của game truyền thống bằng cách kết hợp <strong class="sol-hl sol-hl--gold">cơ chế RPG Công bằng</strong> với <strong class="sol-hl sol-hl--gold">Nền kinh tế O2O Bền vững</strong>.',
+    coreValue: '<span class="sol-hl sol-hl--teal">GIÁ TRỊ CỐT LÕI:</span> Tôn vinh <strong class="sol-hl sol-hl--gold">di sản</strong> qua <strong class="sol-hl sol-hl--teal">công nghệ lấy con người làm trung tâm</strong> để thúc đẩy <strong class="sol-hl sol-hl--gold">thịnh vượng chung</strong> và <strong class="sol-hl sol-hl--gold">giải trí có mục đích.</strong>',
+    formulaVerb1: 'DÙNG',
+    formulaNoun1: 'Công Nghệ',
+    formulaSub1: 'để',
+    formulaSubList1: 'Online-to-Offline',
+    formulaSubList2: 'AI Tự Sự Tiến Hóa',
+    formulaVerb2: 'BẢO TỒN',
+    formulaNoun2: 'Di Sản',
+    formulaSub2: 'bằng',
+    formulaVerb3: 'CHUYỂN HÓA',
+    formulaNoun3: 'Tài Sản Kỹ Thuật Số',
+    formulaNounSm: 'Metaverse Di Sản',
+    visionLabel: 'Tầm Nhìn',
+    visionText: 'Trở thành <strong class="sol-hl sol-hl--gold">hệ sinh thái di sản kỹ thuật số</strong> hàng đầu thế giới, nơi mọi giá trị văn hóa của nhân loại được bất tử hóa và tái sinh rực rỡ trong kỷ nguyên <strong class="sol-hl sol-hl--teal">Metaverse</strong>.',
+    missionLabel: 'Sứ Mệnh',
+    mission1: '<strong class="sol-hl sol-hl--gold">Hồi Sinh Di Sản:</strong> Sử dụng trí tuệ nhân tạo để thu hẹp khoảng cách thế hệ, biến các tài liệu lịch sử khô khan thành những trải nghiệm tương tác hấp dẫn cho giới trẻ.',
+    mission2: '<strong class="sol-hl sol-hl--gold">Bất Tử Hóa Giá Trị:</strong> Số hóa và bảo tồn linh hồn văn hóa ASEAN trong không gian số, đảm bảo nó không bao giờ phai mờ theo thời gian.',
+    mission3: '<strong class="sol-hl sol-hl--gold">Thúc Đẩy Kinh Tế Bền Vững:</strong> Tạo ra mô hình kinh tế Hybrid (O2O) chuyển đổi người dùng trực tuyến thành khách du lịch thực tế, trực tiếp hỗ trợ cộng đồng địa phương và các di tích.',
+  },
+  heroIntro: {
+    eyebrow: 'Một thế giới sống động từ Đông Nam Á',
+    title: 'AETERNA',
+    tagline: 'Thần Thoại · Ký Ức · Di Sản',
+    cta: 'Khám Phá Thế Giới',
+  },
   footer: {
     kicker: 'Kết thúc giới thiệu — thế giới vẫn mở',
     tagline: 'Một thế giới sống động được xây dựng từ thần thoại, ký ức và những tuyến đường thực của Đông Nam Á.',
@@ -108,8 +136,7 @@ const vi = {
     replayIntro: 'Xem lại giới thiệu',
     enterAtlas: 'Vào bản đồ',
     navPillars: 'Trụ Cột',
-    navHeritage: 'Di Sản',
-    navImpact: 'Tác Động',
+    navFeatures: 'Tính Năng',
     navAtlas: 'Bản Đồ',
     scrollTop: '↑ Lên Đầu',
     ariaFooter: 'Phần kết AETERNA',
@@ -169,6 +196,92 @@ const vi = {
       description: 'AETERNA kết nối cộng đồng trẻ, tổ chức và chính phủ trong một mạng lưới di sản chung được thúc đẩy bởi hợp tác văn hóa, thông tin chi tiết dữ liệu và sứ mệnh bền vững.',
     },
   },
+
+  
+  sliderSection: {
+    kicker: "AETERNA · BIÊN NIÊN SỬ ASEAN",
+    questLabel: "NHIỆM VỤ",
+    prev: "Quốc gia trước",
+    next: "Quốc gia tiếp theo",
+    select: "Chọn {{name}}",
+    aria: "Biên niên sử ASEAN — 11 Quốc gia"
+  },
+  featuresSection: {
+    kicker: "Tính năng cốt lõi",
+    heading: "Bảy Trụ Cột của <em>AETERNA</em>",
+    subheading: "Mỗi tính năng là một cánh cửa dẫn vào thế giới di sản sống động — được thiết kế để bảo tồn, kết nối và truyền cảm hứng.",
+    f1Title: "Nhiệm Vụ <span class='feature-card__title-highlight'>Di Sản Cá Nhân Hóa</span>",
+    f1Desc: "Aeterna bắt đầu bằng hành trình giải phóng cá nhân, nơi người chơi hóa thân vào chuyến phiêu lưu xuyên không, mạo hiểm vào các vùng đất di sản được tái hiện bằng công nghệ 3D chính xác. Hệ thống nhiệm vụ được cá nhân hóa dựa trên hành vi, cho phép người chơi tương tác sâu sắc với các giá trị văn hóa địa phương.",
+    f2Title: "Nhân Cách Hóa <span class='feature-card__title-highlight'>Lịch Sử</span>",
+    f2Desc: "Cốt lõi của trò chơi là cơ chế 'Nhân cách hóa lịch sử'. Thông qua hệ thống Gacha, người chơi sở hữu các nhân vật dựa trên các anh hùng và nhân vật lịch sử từ 11 quốc gia ASEAN. Gacha dành riêng cho Trang phục Cổ và Linh vật Truyền thuyết.",
+    f3Title: "Điểm Tích Lũy <span class='feature-card__title-highlight'>Văn Hóa</span>",
+    f3Desc: "Để tránh yếu tố may rủi thuần túy, Aeterna tích hợp 'Điểm tích lũy văn hóa'. Mỗi lần Gacha không thành công sẽ được chuyển đổi thành tài nguyên kiến thức hoặc vật phẩm có giá trị, đảm bảo người chơi luôn nhận được giá trị kiến thức và tinh thần tương xứng.",
+    f4Title: "Nền Kinh Tế <span class='feature-card__title-highlight'>Do Người Chơi Vận Hành</span>",
+    f4Desc: "Aeterna thiết lập một nền kinh tế do người chơi điều hành, nơi các vật phẩm hiếm, trang phục và nhân vật trở thành tài sản kỹ thuật số có thể giao dịch và ký gửi, chuyển đổi trải nghiệm của người chơi thành giá trị kinh tế hữu hình.",
+    f5Title: "Đột Kích Nhóm & <span class='feature-card__title-highlight'>Nhiệm Vụ Sinh Thái</span>",
+    f5Desc: "Trò chơi nhấn mạnh sự hiệp lực thông qua các trận đột kích nhóm. Người chơi cùng nhau chinh phục thử thách và tham gia các nhiệm vụ mang thông điệp đương đại, như tiêu diệt 'Quái vật ô nhiễm' và phục hồi hệ sinh thái xanh.",
+    f6Title: "Triển Lãm Cá Nhân & <span class='feature-card__title-highlight'>Sự Kiện Cộng Đồng</span>",
+    f6Desc: "Các tính năng triển lãm cá nhân và sự kiện cộng đồng cho phép game thủ khẳng định cá tính riêng, biến bộ sưu tập di sản của họ thành niềm tự hào và công cụ kết nối văn hóa giữa các quốc gia.",
+    f7Title: "Phần Thưởng Hybrid — <span class='feature-card__title-highlight'>Từ Ảo Đến Thực</span>",
+    f7Desc: "Aeterna kết nối trực tiếp du lịch và tiêu dùng thực thông qua mô hình Phần thưởng Hybrid. Sở hữu bộ sưu tập di sản hiếm trong game sẽ mở khóa các đặc quyền thực tế như voucher dịch vụ, vé tham quan hoặc cổ vật văn hóa hữu hình."
+  },
+  countries: {
+    "vietnam": {
+        "name": "VIỆT NAM",
+        "realm": "CHIỀU KHÔNG GIAN CỦA HƠI THỞ VÀ MẠCH RỒNG",
+        "story": "Các Mạch Rồng đang bị thạch hóa. Người chơi phải đi tìm \"Hơi thở đầu tiên\" của tổ tiên để làm tan chảy lớp đá, giúp dòng chảy sự sống — văn hóa lúa nước và sự kiên cường — luân chuyển trở lại."
+    },
+    "thailand": {
+        "name": "THÁI LAN",
+        "realm": "VƯƠNG QUỐC CỦA ÁNH SÁNG HOÀNG KIM TÁI SINH",
+        "story": "Lớp vàng bên ngoài đang trở thành một cái bẫy giam cầm linh hồn dân tộc. Người chơi phải thâm nhập vào \"Lõi Mặt Trời\" để đánh thức nội lực thực sự bên dưới vẻ hào nhoáng, tìm lại sự tự do và tâm linh thuần khiết."
+    },
+    "cambodia": {
+        "name": "CAMBODIA",
+        "realm": "TIẾNG VỌNG TỪ NHỮNG NGƯỜI KHỔNG LỒ ĐÁ",
+        "story": "Những vị thần đá đang dần quên đi tên mình, khiến mặt đất rung chuyển và đổ nát. Người chơi phải dùng âm nhạc và các điệu múa cổ xưa để nhắc lại danh tính cho đá thần, giữ cho thế giới không bị sụp đổ."
+    },
+    "indonesia": {
+        "name": "INDONESIA",
+        "realm": "QUẦN ĐẢO CỦA NGHÌN LINH HỒN PHẢN CHIẾU",
+        "story": "Các cái bóng đang bị sương xám làm tha hóa, tách rời khỏi chủ nhân để tạo ra sự hỗn loạn (The Chaos Barong). Người chơi phải cân bằng lại hai thái cực Ánh sáng và Bóng tối để thế giới không bị nuốt chửng."
+    },
+    "philippines": {
+        "name": "PHILIPPINES",
+        "realm": "QUẦN ĐẢO CỦA NHỮNG NGÔI SAO SA",
+        "story": "Biển tro tàn đang dâng cao để dập tắt sức nóng của những ngôi sao. Người chơi phải kết nối sức mạnh cộng đồng (tinh thần Bayanihan) để thắp sáng lại ngọn lửa thiêng rực rỡ nhất, xua tan bóng đêm lạnh giá của đại dương."
+    },
+    "malaysia": {
+        "name": "MALAYSIA",
+        "realm": "NƠI BA NGỌN GIÓ HỘI TỤ",
+        "story": "Một loài ký sinh \"Đơn sắc\" đang bám vào gốc cây, cố gắng biến mọi thứ thành một màu xám xịt duy nhất. Người chơi phải bảo vệ sự đa sắc tộc, giúp ba ngọn gió hòa làm một để tạo ra lá chắn bảo vệ cây thế giới."
+    },
+    "singapore": {
+        "name": "SINGAPORE",
+        "realm": "PHÁO ĐÀI PHA LÊ THỜI GIAN",
+        "story": "Thời gian đang bị rò rỉ ra biển. Người chơi phải tìm về nguồn gốc của dòng chảy (Temasek cổ xưa) để hiểu rằng tương lai chỉ có thể tồn tại nếu có gốc rễ vững chắc bên dưới lớp kính pha lê hiện đại."
+    },
+    "myanmar": {
+        "name": "MYANMAR",
+        "realm": "VÙNG ĐẤT CỦA TIẾNG CHUÔNG VĨNH HẰNG",
+        "story": "\"Thực thể Tĩnh lặng\" đang nuốt chửng các âm thanh. Người chơi phải thu thập các tần số rung động từ lòng đất (lòng sùng kính và trí tuệ) để tạo ra một bản hòa ca vĩ đại, đập tan sự im lặng chết chóc."
+    },
+    "laos": {
+        "name": "LÀO",
+        "realm": "DÒNG SÔNG CỦA TRIỆU GIẤC MƠ TRẮNG",
+        "story": "Dòng sông bị đóng băng bởi sự vô cảm. Người chơi phải tìm lại \"Ngọn lửa sưởi ấm tâm hồn\" (sự bình thản và lòng tốt) để làm tan băng, giúp dòng sông tiếp tục chảy và nuôi dưỡng những ước mơ dân tộc."
+    },
+    "brunei": {
+        "name": "BRUNEI",
+        "realm": "GIẾNG SÂU CỦA DANH DỰ VÀ VÀNG ĐEN",
+        "story": "Sự tham lam đang làm ô nhiễm nguồn dầu ký ức. Người chơi phải thanh tẩy dòng chảy này bằng các \"Lời thề danh dự\", giữ cho vương quốc luôn giữ được sự thịnh vượng đi kèm với đạo đức cổ xưa."
+    },
+    "timorLeste": {
+        "name": "TIMOR-LESTE",
+        "realm": "CÁI NÔI CỦA THẦN CÁ SẤU TỔ TIÊN",
+        "story": "Con cá sấu đang mệt mỏi và muốn chìm vào giấc ngủ vĩnh hằng (sự diệt vong). Người chơi phải hy sinh những tư lợi cá nhân để đánh thức ý chí sinh tồn của Thần cá sấu, chứng minh rằng dân tộc này vẫn còn sức sống mãnh liệt."
+    }
+},
 };
 
 export default vi;

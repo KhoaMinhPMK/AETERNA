@@ -4,14 +4,13 @@ const lo = {
   nav: {
     logoSub: 'ASEAN Heritage RPG',
     platform: 'ເວທີ',
+    features: 'ຄຸນສົມບັດ',
     atlas: 'ແຜນທີ່',
-    impact: 'ຜົນກະທົບ',
     manifesto: 'ຄຳປະກາດ',
     partner: 'ຄູ່ຮ່ວມງານ',
     journeyMap: 'ແຜນທີ່ການເດີນທາງ',
     intro: 'ແນະນຳ',
     pillars: 'ເສົາ',
-    living: 'ມີຊີວິດ',
     openNav: 'ເປີດການນຳທາງ',
     closeNav: 'ປິດການນຳທາງ',
     goToIntro: 'ໄປທີ່ການແນະນຳ',
@@ -20,7 +19,7 @@ const lo = {
     language: 'ພາສາ',
     changeLanguage: 'ປ່ຽນພາສາ',
   },
-  journeyNav: { ariaIntro: 'ໄປສ່ວນແນະນຳ', ariaPillars: 'ໄປສ່ວນເສົາ', ariaLiving: 'ໄປສ່ວນມໍລະດົກ', ariaAtlas: 'ໄປສ່ວນແຜນທີ່', ariaImpact: 'ໄປສ່ວນຜົນກະທົບ', intro: 'ແນະນຳ', pillars: 'ເສົາ', living: 'ມີຊີວິດ', atlas: 'ແຜນທີ່', impact: 'ຜົນກະທົບ' },
+  journeyNav: { ariaIntro: 'ໄປສ່ວນແນະນຳ', ariaVision: 'ໄປສ່ວນແນວທາງ', ariaPillars: 'ໄປສ່ວນເສົາ', ariaFeatures: 'ໄປສ່ວນຄຸນສົມບັດ', ariaAtlas: 'ໄປສ່ວນແຜນທີ່', intro: 'ແນະນຳ', vision: 'ເວທີ', pillars: 'ເສົາ', features: 'ຄຸນສົມບັດ', atlas: 'ແຜນທີ່' },
   hero: { kicker: 'ເສົາປະສົບການຫຼັກ', hudLabel: 'ເອກະສານ AETERNA', nextPillar: 'ເສົາຕໍ່ໄປ', backToIntro: 'ກັບໄປການແນະນຳໂຄງການ', projectIntro: 'ແນະນຳໂຄງການ', ariaLabel: 'ເສົາ AETERNA', openPillar: 'ເປີດເສົາ {{name}}' },
   bridge01: { eyebrow: 'ຈາກຄຳປະກາດສູ່ປະສົບການ', text: 'ເວທີໄດ້ກາຍເປັນເສົາທີ່ສາມາດຫຼິ້ນໄດ້ 5 ເສົາທີ່ກຳນົດວິທີການຮຽນ ຮູ້ສຶກ ແລະ ດຳລົງຊີວິດ AETERNA.', aria: 'ການປ່ຽນຜ່ານຈາກການແນະນຳສູ່ເສົາ' },
   bridge02: { eyebrow: 'ຈາກເສົາສູ່ໂລກ', text: 'ສິ່ງທີ່ເລີ່ມຕົ້ນເປັນການອອກແບບລະບົບໄດ້ກາຍເປັນໂລກມໍລະດົກທີ່ມີຊີວິດທີ່ຜູ້ຫຼິ້ນສາມາດຜ່ານ ມີອິດທິພົນ ແລະ ຈຳໄດ້.', aria: 'ການປ່ຽນຜ່ານຈາກເສົາສູ່ມໍລະດົກ' },
@@ -59,8 +58,7 @@ const lo = {
     replayIntro: 'ຫຼິ້ນຄືນການແນະນຳ',
     enterAtlas: 'ເຂົ້າແຜນທີ່',
     navPillars: 'ເສົາ',
-    navHeritage: 'ມໍລະດົກ',
-    navImpact: 'ຜົນກະທົບ',
+    navFeatures: 'ຄຸນສົມບັດ',
     navAtlas: 'ແຜນທີ່',
     scrollTop: '↑ ດ້ານເທິງ',
     ariaFooter: 'ຕອນຈົບ AETERNA',
@@ -90,5 +88,120 @@ const lo = {
     o2o_impact: { name: 'ຜົນກະທົບ O2O', primaryTag: 'ຈາກເກມສູ່ຄວາມເປັນຈິງ', secondaryTag: 'ການທ່ອງທ່ຽວ + SMEs', buttonLabel: 'ແນະນຳໂຄງການ', description: 'ລາງວັນຫາຍາກໃນເກມ ເຊື່ອມຕໍ່ກັບ voucher ທ່ອງທ່ຽວ ປະສົບການມໍລະດົກ ແລະ ຜະລິດຕະພັນຊ່າງ ປ່ຽນການຄົ້ນພົບໃນໂລກສົມມຸດໃຫ້ເປັນຄຸນຄ່າຈິງ.' },
     global_reach: { name: 'ການເຂົ້າເຖິງທົ່ວໂລກ', primaryTag: 'Guild ຂ້າມ ASEAN', secondaryTag: 'ການອະນຸລັກທີ່ຍືນຍົງ', buttonLabel: 'ແນະນຳໂຄງການ', description: 'AETERNA ເຊື່ອມຕໍ່ຊຸມຊົນໄວໜຸ່ມ ສະຖາບັນ ແລະ ລັດຖະບານໃນເຄືອຂ່າຍມໍລະດົກທີ່ແບ່ງປັນ ທີ່ຂັບເຄື່ອນໂດຍການຮ່ວມມືວັດທະນະທຳ ຄວາມເຂົ້າໃຈຂໍ້ມູນ ແລະ ພັນກິດຄວາມຍືນຍົງ.' },
   },
+  solution: {
+    kicker: 'ຄຳອທິບາຍແນວທາງ',
+    heading: '<em>AETERNA</em> ມັນແມ່ນຫຍັງ?',
+    bodyP1: 'Aeterna ແມ່ນ<strong class=\"sol-hl sol-hl--gold\">ແພລດຟອມ RPG ມໍລະດົກດິຈິຕອລລະດັບ AAA</strong> ທີ່ໃຊ້ <strong class=\"sol-hl sol-hl--gold\">AI ການເລົ່າເລື່ອງ</strong>ເພື່ອເຮັດໃຫ້ຈິດວິນຍານຂອງ<strong class=\"sol-hl sol-hl--gold\">ອາຊຽນ</strong>ເປັນອະມະຕະ. ພວກເຮົາກ້າວຂ້າມເກມແບບດັ້ງເດີມໂດຍການລວມ<strong class=\"sol-hl sol-hl--gold\">ກົນໄກ RPG ທີ່ຍຸດຕິທຳ</strong>ເຂົ້າກັບ<strong class=\"sol-hl sol-hl--gold\">ເສດຖະກິດ O2O ທີ່ຍືນຍົງ</strong>.',
+    coreValue: '<span class="sol-hl sol-hl--teal">ຄຸນຄ່າຫລັກ:</span> ໃຫ້ເກີດຕິກັນ<strong class="sol-hl sol-hl--gold">ມົລະດົກ</strong> ຜ່ານ<strong class="sol-hl sol-hl--teal">ເທກໂນໂລຍີ</strong> ເພື່ອ<strong class="sol-hl sol-hl--gold">ຄວາມເຈຣິຍຮຸ່ງຮ່ວມກັນ</strong>.',
+    formulaVerb1: 'ໃຊ້',
+    formulaNoun1: 'ເທກໂນໂລຍີ',
+    formulaSub1: 'ເພື່ອ',
+    formulaSubList1: 'Online-to-Offline',
+    formulaSubList2: 'AI ເລ່າເລື່ອງ',
+    formulaVerb2: 'ອນຸລັກ',
+    formulaNoun2: 'ມົລະດົກ',
+    formulaSub2: 'ດ້ວຍ',
+    formulaVerb3: 'ປ່ຽນ',
+    formulaNoun3: 'ທາດດີຈີຕອນ',
+    formulaNounSm: 'Metaverse ມົລະດົກ',
+    visionLabel: 'ວິໄສທັດ',
+    visionText: 'ກາຍເປັນ<strong class="sol-hl sol-hl--gold">ລະບົບນິເວດມົລະດົກດີຈີຕອນ</strong>ຊັນນຳຂອງໂລກໃນ<strong class="sol-hl sol-hl--teal">Metaverse</strong>.',
+    missionLabel: 'ພັນກິດ',
+    mission1: '<strong class="sol-hl sol-hl--gold">ຟື້ນຟູມົລະດົກ:</strong> ໃຊ້ AI ເຊື່ອມຊ່ອງວ່າງກະນຸ່ນ ປ່ຽນເອກະສານປະຫວັດສາດໃຫ້ເປັນປະສົບການທີ່ນ່າສະໃຈ.',
+    mission2: '<strong class="sol-hl sol-hl--gold">ຄຸນຄ່າຍືນຍັງ:</strong> ຈັດເກັບວັດທະນະທຳ ASEAN ເຂົ້າໄປໃນດີຈີຕອນອຍ່າງຖາວະ.',
+    mission3: '<strong class="sol-hl sol-hl--gold">ເສດຖະກິດຍືນຍັງ:</strong> ສ້າງບົດບົດ O2O ທີ່ປ່ຽນຜູ້ໃຊ້ງານອອນໄລນໃຫ້ເປັນນັກທ່ອງທ່ຽວຈິງ.',
+  },
+  heroIntro: {
+    eyebrow: 'ໂລກທີ່ມີຊີວິດຈາກອາຊີຕາເວັນອອກສ່ຽງໃຕ້',
+    title: 'AETERNA',
+    tagline: 'ຕຳນານ · ຄວາມຊົງຈຳ · ມົລະດົກ',
+    cta: 'ສຳຫລວດໂລກ',
+  },
+
+  
+  sliderSection: {
+    kicker: "AETERNA · ASEAN CHRONICLES",
+    questLabel: "QUEST",
+    prev: "Previous nation",
+    next: "Next nation",
+    select: "Select {{name}}",
+    aria: "ASEAN Chronicles — 11 Nations"
+},
+  featuresSection: {
+    kicker: "ຄຸນສົມບັດຫຼັກ",
+    heading: "ເສົາຫຼັກເຈັດຂອງ <em>AETERNA</em>",
+    subheading: "ແຕ່ລະຄຸນສົມບັດແມ່ນປະຕູສູ່ໂລກມໍລະດົກທີ່ມີຊີວິດ — ອອກແບບເພື່ອອະນຸລັກ, ເຊື່ອມຕໍ່ ແລະ ສ້າງແຮງບັນດານໃຈ.",
+    f1Title: "ພາລະກິດ <span class='feature-card__title-highlight'>ມໍລະດົກສ່ວນບຸກຄົນ</span>",
+    f1Desc: "Aeterna ເລີ່ມຕົ້ນດ້ວຍການເດີນທາງແຫ່ງການປົດປ່ອຍ, ບ່ອນທີ່ຜູ້ຫຼິ້ນຜະຈົນໄປໃນດິນແດນມໍລະດົກທີ່ສ້າງດ້ວຍເຕັກໂນໂລຊີ 3D ທີ່ແນ່ນອນ.",
+    f2Title: "ການ <span class='feature-card__title-highlight'>ສະແດງເປັນບຸກຄົນປະຫວັດສາດ</span>",
+    f2Desc: "ຫົວໃຈຂອງເກມແມ່ນກົນໄກ 'ການສະແດງເປັນບຸກຄົນປະຫວັດສາດ'. ຜ່ານລະບົບ Gacha, ຜູ້ຫຼິ້ນໄດ້ຮັບຕົວລະຄອນຈາກວິລະບູລຸດຂອງ 11 ປະເທດອາຊຽນ.",
+    f3Title: "ຄະແນນ <span class='feature-card__title-highlight'>ສະສົມວັດທະນະທຳ</span>",
+    f3Desc: "ເພື່ອຫຼີກລ່ຽງໂຊກລ້ວນໆ, Aeterna ລວມ 'ຄະແນນສະສົມວັດທະນະທຳ'. ທຸກຄັ້ງທີ່ Gacha ບໍ່ສຳເລັດຈະຖືກປ່ຽນເປັນຊັບພະຍາກອນຄວາມຮູ້ທີ່ມີຄ່າ.",
+    f4Title: "ເສດຖະກິດ <span class='feature-card__title-highlight'>ນຳໂດຍຜູ້ຫຼິ້ນ</span>",
+    f4Desc: "Aeterna ສ້າງເສດຖະກິດທີ່ນຳໂດຍຜູ້ຫຼິ້ນ ບ່ອນທີ່ລາຍການຫາຍາກກາຍເປັນຊັບສິນດິຈິຕອນທີ່ສາມາດຊື້ຂາຍໄດ້.",
+    f5Title: "ການບຸກ <span class='feature-card__title-highlight'>ທີມ & ພາລະກິດນິເວດ</span>",
+    f5Desc: "ເກມເນັ້ນການຮ່ວມມືຜ່ານການບຸກທີມ ແລະ ພາລະກິດທີ່ມີຂໍ້ຄວາມຮ່ວມສະໄໝ ເຊັ່ນ ກຳຈັດ 'ສັດປະຫຼາດມົນລະພິດ' ແລະ ຟື້ນຟູລະບົບນິເວດ.",
+    f6Title: "ງານວາງສະແດງສ່ວນຕົວ & <span class='feature-card__title-highlight'>ງານຊຸມຊົນ</span>",
+    f6Desc: "ຄຸນສົມບັດງານວາງສະແດງສ່ວນຕົວເຮັດໃຫ້ຜູ້ຫຼິ້ນສະແດງອັດຕະລັກ ແລະ ປ່ຽນການສະສົມມໍລະດົກເປັນເຄື່ອງມືເຊື່ອມຕໍ່ວັດທະນະທຳ.",
+    f7Title: "ລາງວັນປະສົມ — <span class='feature-card__title-highlight'>ຈາກສະເໝືອນສູ່ຄວາມຈິງ</span>",
+    f7Desc: "Aeterna ເຊື່ອມຕໍ່ການທ່ອງທ່ຽວ ແລະ ການບໍລິໂພກຈິງໂດຍກົງຜ່ານໂມເດລລາງວັນປະສົມ. ການສະສົມຫາຍາກເປີດສິດທິພິເສດເຊັ່ນ voucher ບໍລິການ."
+  },
+  countries: {
+    "vietnam": {
+        "name": "ຫວຽດນາມ",
+        "realm": "ມິຕິແຫ່ງລົມຫາຍໃຈ",
+        "story": "ເສັ້ນເລືອດມັງກອນພວມກາຍເປັນຫີນ. ຊອກຫາລົມຫາຍໃຈທໍາອິດຂອງບັນພະບຸລຸດເພື່ອລະລາຍຊັ້ນຫີນແລະຟື້ນຟູຊີວິດ."
+    },
+    "thailand": {
+        "name": "ໄທ",
+        "realm": "ອານາຈັກແຫ່ງແສງທອງຄືນຊີບ",
+        "story": "ຊັ້ນທອງກຳລັງຂັງຈິດວິນຍານ. ເຂົ້າໄປທີ່ແກນກາງດວງອາທິດເພື່ອປຸກພະລັງທີ່ແທ້ຈິງທີ່ເຊື່ອງຢູ່."
+    },
+    "cambodia": {
+        "name": "ກຳປູເຈຍ",
+        "realm": "ສຽງສະທ້ອນຈາກຍັກຫີນ",
+        "story": "ເທວະດາຫີນລືມຊື່ຂອງຕົນເອງ ເຮັດໃຫ້ແຜ່ນດິນສັ່ນສະເທືອນ. ໃຊ້ດົນຕີບູຮານເພື່ອເຕືອນຄວາມຊົງຈຳຂອງພວກເຂົາ."
+    },
+    "indonesia": {
+        "name": "ອິນໂດເນເຊຍ",
+        "realm": "ໝູ່ເກາະແຫ່ງພັນວິນຍານສະທ້ອນ",
+        "story": "ເງົາຖືກເລີຍດ້ວຍໝອກສີເທົາ. ຮັກສາຄວາມສົມດຸນແສງແລະຄວາມມືດເພື່ອປົກປ້ອງໂລກຈາກ Chaos Barong."
+    },
+    "philippines": {
+        "name": "ຟີລິບປິນ",
+        "realm": "ໝູ່ເກາະແຫ່ງດວງດາວທີ່ຕົກລົງມາ",
+        "story": "ທະເລເທົ່າກຳລັງຂຶ້ນ. ເຊື່ອມຕໍ່ພະລັງຊຸມຊົນເພື່ອຈູດໄຟສັກສິດອີກຄັ້ງແລະຂັບໄລ່ຄວາມມືດ."
+    },
+    "malaysia": {
+        "name": "ມາເລເຊຍ",
+        "realm": "ສະຖານທີ່ທີ່ສາຍລົມມາບັນຈົບກັນ",
+        "story": "ກາຝາກພະຍາຍາມປ່ຽນທຸກສິ່ງເປັນສີເທົາ. ປົກປ້ອງຄວາມຫຼາກຫຼາຍທາງຊົນເຜົ່າເພື່ອສ້າງກຳລັງປ້ອງກັນຕົ້ນໄມ້."
+    },
+    "singapore": {
+        "name": "ສິງກະໂປ",
+        "realm": "ປ້ອມປາການຄຣິສຕัลແຫ່ງການເວລາ",
+        "story": "ເວລາຮົ່ວໄຫຼລົງສູ່ທະເລ. ຊອກຫາຕົ້ນກຳເນີດເພື່ອເຂົ້າໃຈວ່າອະນາຄົດຕ້ອງການຮາກທີ່ໝັ້ນຄົງພາຍໃຕ້ຄວາມທັນສະໄໝ."
+    },
+    "myanmar": {
+        "name": "ມຽນມາ",
+        "realm": "ດິນແດນແຫ່ງລະຄັງນິລັນດອນ",
+        "story": "ຄວາມງຽບສະຫງົບກືນກິນສຽງ. ລວບລວມການສັ່ນສະເທືອນຈາກດິນເພື່ອສ້າງບົດເພງທຳລາຍຄວາມງຽບເປັນຕາຍ."
+    },
+    "laos": {
+        "name": "ລາວ",
+        "realm": "ແມ່ນ້ຳແຫ່ງລ້ານຄວາມຝັນ",
+        "story": "ແມ່ນ້ຳຖືກແຊ່ແຂງດ້ວຍຄວາມເມີນເສີຍ. ຊອກຫາແປວໄຟທີ່ອົບອຸ່ນຈິດວິນຍານເພື່ອລະລາຍນ້ຳກ້ອນແລະບຳລຸງລ້ຽງຄວາມຝັນ."
+    },
+    "brunei": {
+        "name": "ບຣູໄນ",
+        "realm": "ນ້ຳສ້າງເລິກແຫ່ງກຽດຕິຍົດ",
+        "story": "ຄວາມໂລບສ້າງມົນລະພິດໃຫ້ກັບນ້ຳມັນ. ຊຳລະດ້ວຍຄຳປະຕິຍານແຫ່ງກຽດຕິຍົດເພື່ອຮັກສາຄວາມຈະເລີນຮຸ່ງເຮືອງແລະສິນທຳ."
+    },
+    "timorLeste": {
+        "name": "ຕີມໍເຫຼດເຕ",
+        "realm": "ແຫຼ່ງກຳເນີດຂອງເທບພະເຈົ້າແຂ້",
+        "story": "ແຂ້ຢາກຈົມລົງສູ່ຄວາມຕາຍ. ເສຍສະຫຼະຜົນປະໂຫຍດສ່ວນຕົວເພື່ອປຸກຄວາມປາຖະໜາທີ່ຈະຢູ່ລອດຂອງແຂ້."
+    }
+},
 };
 export default lo;

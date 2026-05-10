@@ -4,14 +4,13 @@ const fr = {
   nav: {
     logoSub: 'RPG Patrimoine ASEAN',
     platform: 'Plateforme',
+    features: 'Fonctionnalités',
     atlas: 'Atlas',
-    impact: 'Impact',
     manifesto: 'Manifeste',
     partner: 'Partenaire',
     journeyMap: 'Carte du voyage',
     intro: 'Intro',
     pillars: 'Piliers',
-    living: 'Vivant',
     openNav: 'Ouvrir la navigation',
     closeNav: 'Fermer la navigation',
     goToIntro: "Aller à l'introduction",
@@ -20,7 +19,7 @@ const fr = {
     language: 'Langue',
     changeLanguage: 'Changer de langue',
   },
-  journeyNav: { ariaIntro: "Aller à la section d'introduction", ariaPillars: 'Aller à la section des piliers', ariaLiving: 'Aller à la section du patrimoine vivant', ariaAtlas: "Aller à la section de l'atlas", ariaImpact: "Aller à la section d'impact", intro: 'Intro', pillars: 'Piliers', living: 'Vivant', atlas: 'Atlas', impact: 'Impact' },
+  journeyNav: { ariaIntro: "Aller à la section d'introduction", ariaVision: 'Aller à la section de description', ariaPillars: 'Aller à la section des piliers', ariaFeatures: 'Aller à la section des fonctionnalités', ariaAtlas: "Aller à la section de l'atlas", intro: 'Intro', vision: 'Plateforme', pillars: 'Piliers', features: 'Fonctionnalités', atlas: 'Atlas' },
   hero: { kicker: "Pilier d'expérience principale", hudLabel: 'DOSSIER AETERNA', nextPillar: 'Pilier suivant', backToIntro: 'Retour à la présentation du projet', projectIntro: 'Intro Projet', ariaLabel: 'Piliers AETERNA', openPillar: 'Ouvrir le pilier {{name}}' },
   bridge01: { eyebrow: 'du manifeste à l\'expérience', text: 'La plateforme se cristallise en cinq piliers jouables qui définissent comment AETERNA est appris, ressenti et vécu.', aria: "Transition de l'introduction aux piliers" },
   bridge02: { eyebrow: 'des piliers au monde', text: 'Ce qui commence comme une conception de système devient un monde de patrimoine vivant que les joueurs peuvent traverser, influencer et mémoriser.', aria: 'Transition des piliers au patrimoine vivant' },
@@ -59,8 +58,7 @@ const fr = {
     replayIntro: "Revoir l'intro",
     enterAtlas: "Entrer dans l'atlas",
     navPillars: 'Piliers',
-    navHeritage: 'Patrimoine',
-    navImpact: 'Impact',
+    navFeatures: 'Fonctionnalités',
     navAtlas: 'Atlas',
     scrollTop: '↑ Haut',
     ariaFooter: 'Finale AETERNA',
@@ -90,5 +88,120 @@ const fr = {
     o2o_impact: { name: 'Impact O2O', primaryTag: 'Du Jeu à la Réalité', secondaryTag: 'Tourisme + PME', buttonLabel: 'Intro Projet', description: "Les récompenses rares en jeu se connectent à des bons de voyage, des expériences patrimoniales et des produits artisanaux, transformant la découverte virtuelle en valeur réelle mesurable." },
     global_reach: { name: 'Portée Mondiale', primaryTag: 'Guildes à travers l\'ASEAN', secondaryTag: 'Préservation Durable', buttonLabel: 'Intro Projet', description: "AETERNA relie jeunes communautés, institutions et gouvernements dans un réseau patrimonial partagé propulsé par la collaboration culturelle, les données et les missions durables." },
   },
+  solution: {
+    kicker: 'Description de la Solution',
+    heading: 'Qu\'est-ce qu\'<em>AETERNA ?</em>',
+    bodyP1: 'Aeterna est une <strong class="sol-hl sol-hl--gold">plateforme RPG de patrimoine numérique AAA</strong> qui utilise <strong class="sol-hl sol-hl--gold">l\'IA narrative</strong> pour immortaliser l\'âme de <strong class="sol-hl sol-hl--gold">l\'ANASE</strong>. Nous transcendons le jeu traditionnel en fusionnant des <strong class="sol-hl sol-hl--gold">mécaniques RPG équitables</strong> avec une <strong class="sol-hl sol-hl--gold">économie O2O durable</strong>.',
+    coreValue: '<span class="sol-hl sol-hl--teal">VALEUR CLÉ :</span> Honorer le <strong class="sol-hl sol-hl--gold">patrimoine</strong> à travers une <strong class="sol-hl sol-hl--teal">technologie centrée sur l\'humain</strong> pour favoriser la <strong class="sol-hl sol-hl--gold">prospérité partagée</strong> et un <strong class="sol-hl sol-hl--gold">divertissement qui a du sens.</strong>',
+    formulaVerb1: 'UTILISER',
+    formulaNoun1: 'Technologie',
+    formulaSub1: 'pour',
+    formulaSubList1: 'Online-to-Offline',
+    formulaSubList2: 'IA Narrative Évolutive',
+    formulaVerb2: 'PRÉSERVER',
+    formulaNoun2: 'Patrimoine',
+    formulaSub2: 'par',
+    formulaVerb3: 'TRANSFORMER',
+    formulaNoun3: 'Actifs Numériques',
+    formulaNounSm: 'Metaverse Patrimonial',
+    visionLabel: 'Vision',
+    visionText: 'Devenir le premier <strong class="sol-hl sol-hl--gold">écosystème de patrimoine numérique</strong> mondial, où toutes les valeurs culturelles de l\'humanité sont immortalisées et brillamment reborn dans l\'<strong class="sol-hl sol-hl--teal">espace Metaverse</strong>.',
+    missionLabel: 'Mission',
+    mission1: '<strong class="sol-hl sol-hl--gold">Revitaliser le Patrimoine :</strong> Utiliser l\'IA pour combler le fossé générationnel, transformant des documents historiques arides en expériences interactives captivantes pour les jeunes.',
+    mission2: '<strong class="sol-hl sol-hl--gold">Immortaliser les Valeurs :</strong> Numériser et préserver l\'essence de la culture ASEAN dans l\'espace numérique, assurant qu\'elle ne s\'efface jamais.',
+    mission3: '<strong class="sol-hl sol-hl--gold">Promouvoir l\'Economie Durable :</strong> Créer un modèle économique hybride (O2O) convertissant les utilisateurs en ligne en touristes réels, soutenant les communautés locales.',
+  },
+  heroIntro: {
+    eyebrow: 'Un monde vivant d\'Asie du Sud-Est',
+    title: 'AETERNA',
+    tagline: 'Mythe · Mémoire · Patrimoine',
+    cta: 'Explorer le Monde',
+  },
+
+  
+  sliderSection: {
+    kicker: "AETERNA · ASEAN CHRONICLES",
+    questLabel: "QUEST",
+    prev: "Previous nation",
+    next: "Next nation",
+    select: "Select {{name}}",
+    aria: "ASEAN Chronicles — 11 Nations"
+},
+  featuresSection: {
+    kicker: "Fonctionnalités principales",
+    heading: "Les sept piliers d'<em>AETERNA</em>",
+    subheading: "Chaque fonctionnalité est une porte vers un monde patrimonial vivant — conçue pour préserver, connecter et inspirer.",
+    f1Title: "Quêtes <span class='feature-card__title-highlight'>patrimoniales personnalisées</span>",
+    f1Desc: "Aeterna commence par un voyage de libération personnelle, où les joueurs s'aventurent dans des terres patrimoniales recréées en 3D précise.",
+    f2Title: "<span class='feature-card__title-highlight'>Personnification</span> historique",
+    f2Desc: "Le cœur du jeu est son mécanisme de 'Personnification historique'. Via le système Gacha, les joueurs acquièrent des personnages basés sur les héros de 11 pays de l'ASEAN.",
+    f3Title: "Points d'<span class='feature-card__title-highlight'>accumulation culturelle</span>",
+    f3Desc: "Pour éviter le pur hasard, Aeterna intègre des 'Points d'accumulation culturelle'. Chaque tentative Gacha infructueuse est convertie en ressources de connaissance précieuses.",
+    f4Title: "Économie <span class='feature-card__title-highlight'>dirigée par les joueurs</span>",
+    f4Desc: "Aeterna établit une économie dirigée par les joueurs où les objets rares deviennent des actifs numériques échangeables.",
+    f5Title: "Raids <span class='feature-card__title-highlight'>d'équipe & missions écologiques</span>",
+    f5Desc: "Le jeu met l'accent sur la synergie à travers des raids d'équipe et des missions contemporaines comme l'élimination des 'Monstres de pollution'.",
+    f6Title: "Exposition personnelle & <span class='feature-card__title-highlight'>événements communautaires</span>",
+    f6Desc: "Les fonctionnalités d'exposition personnelle permettent aux joueurs d'affirmer leur individualité et de transformer leurs collections en outils de connexion culturelle.",
+    f7Title: "Récompense hybride — <span class='feature-card__title-highlight'>du virtuel au réel</span>",
+    f7Desc: "Aeterna connecte directement le tourisme et la consommation réelle via son modèle de récompense hybride. Les collections rares débloquent des privilèges réels."
+  },
+  countries: {
+    "vietnam": {
+        "name": "VIETNAM",
+        "realm": "DIMENSION DU SOUFFLE",
+        "story": "Les veines du dragon se pétrifient. Trouvez le \"Premier souffle\" pour restaurer le flux continu de vie et de résilience."
+    },
+    "thailand": {
+        "name": "THAÏLANDE",
+        "realm": "ROYAUME DE LA LUMIÈRE DORÉE",
+        "story": "La couche d\'or extérieure retient l\'âme nationale. Infiltrez le pôle du Soleil pour réveiller la véritable force intérieure."
+    },
+    "cambodia": {
+        "name": "CAMBODGE",
+        "realm": "ÉCHOS DES GÉANTS DE PIERRE",
+        "story": "Les dieux de pierre oublient leurs noms. Utilisez la musique et la danse pour leur rappeler leur identité."
+    },
+    "indonesia": {
+        "name": "INDONÉSIE",
+        "realm": "ARCHIPEL D\'ÂMES REFLÉTÉES",
+        "story": "Les ombres corrompues créent le chaos. Rééquilibrez la Lumière et l\'Ombre pour éviter que le monde ne disparaisse."
+    },
+    "philippines": {
+        "name": "PHILIPPINES",
+        "realm": "ARCHIPEL DES ÉTOILES FILANTES",
+        "story": "La mer de cendres monte. Utilisez le pouvoir de la communauté pour raviver la flamme sacrée et dissiper les ténèbres."
+    },
+    "malaysia": {
+        "name": "MALAISIE",
+        "realm": "OÙ TROIS VENTS SE RENCONTRENT",
+        "story": "Un parasite tente de tout rendre gris. Protégez la diversité, unifiez les trois vents pour bouclier l\'arbre du monde."
+    },
+    "singapore": {
+        "name": "SINGAPOUR",
+        "realm": "FORTERESSE DU TEMPS",
+        "story": "Le temps fuit. Trouvez les origines pour comprendre qu\'un futur doit avoir des racines solides derrière le verre moderne."
+    },
+    "myanmar": {
+        "name": "MYANMAR",
+        "realm": "PAYS DE LA CLOCHE ÉTERNELLE",
+        "story": "L\'Entité du Silence étouffe les sons. Regroupez les fréquences vibratoires pour briser ce mutisme avec une symphonie."
+    },
+    "laos": {
+        "name": "LAOS",
+        "realm": "FLEUVE D\'UN MILLION DE RÊVES",
+        "story": "Le fleuve est gelé par l\'apathie. Redécouvrez la chaleur intérieure pour fondre la glace et raviver l\'espoir."
+    },
+    "brunei": {
+        "name": "BRUNEI",
+        "realm": "CŒUR D\'HONNEUR ET D\'OR NOIR",
+        "story": "L\'avidité corrompt les souvenirs. Purifiez-la avec des Serments d\'Honneur pour préserver la prospérité associée à l\'intégrité."
+    },
+    "timorLeste": {
+        "name": "TIMOR ORIENTAL",
+        "realm": "BERCEAU DE L\'ANCÊTRE CROCODILE",
+        "story": "Le crocodile réclame un profond sommeil. Oubliez vos intérêts personnels pour éveiller sa volonté de survivre."
+    }
+},
 };
 export default fr;
